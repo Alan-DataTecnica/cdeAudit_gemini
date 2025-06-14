@@ -1,0 +1,6 @@
+pandas
+numpy
+google-genai
+sentence_transformers
+community
+networkx

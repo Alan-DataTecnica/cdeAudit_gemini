@@ -1,0 +1,8 @@
+# Ignore all files in the outputs directory
+outputs/
+
+# Ignore all files in the cdeCatalogs directory
+cdeCatalogs/
+
+# Ignore conda’s environment directory
+.conda/

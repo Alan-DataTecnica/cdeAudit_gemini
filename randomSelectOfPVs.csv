@@ -1,0 +1,105 @@
+randomly_selected_values
+0-144
+Head|Neck|Chest|Abdomen|Pelvis|Extremity
+"min: 0, max: 50, unit: milliliters"
+NO|YES
+"0-100,000"
+Transcalvarial: Transcalvarial. Tonsillar: Tonsillar. Uncal left: Uncal left. Uncal right: Uncal right. Subfalcine: Subfalcine
+"Hippocampus: Hippocampus. Lobes: Lobes. Other, specify: Other, specify. Thalamus: Thalamus"
+Datatype: NumericPermissible_values: Any real number where -100% ≤ value ≤ 100%
+"1, Parkinson's disease|2, Dementia|3, Seizures|4, Sudden death at a young age (less than 50)|5, Breast cancer|6, Ovarian cancer|7, Colon cancer|8, Lymphoma or leukemia|9, Heart Disease/Heart attack|10, Stroke|11, Gaucher Disease|12, Known Gaucher Disease Carrier|13, Other|14, Tremors|15, Progressive Supranuclear Palsy (PSP)|16, Multiple System Atrophy (MSA)|17, Cortical Basilar Dystrophy (CBD)|18, Seborrheic Keratosis (cradle cap)|19, Polio|20, Meningitis/encephalitis|21, Diabetes|22, Head Injury/trauma"
+"EPI: EPI. SSFSP: SSFSP. Spiral: Spiral. Other,specify: Other,specify"
+Sharp|Dull|Burning|Stabbing|Other
+"or decision-making errors, so that others do not realize it in the last week.Datatype: IntegerUnit: Non-applicablePermissible"
+0.0 - 150.0 rad/s
+0.0 - 20.0
+Any real number from 0 to positive infinity
+Abundant: Abundant. Continuous: Continuous. Frequent: Frequent. Occasional: Occasional. Rare: Rare
+Any numerical value within the clinically acceptable range
+"0, I have not lost interest in other people.|1, I am less interested in other people than I used to be.|2, I have lost most of my interest in other people.|3, I have lost all of my interest in other people."
+Any numeric value between 16.0 and 18.2
+"0	No diabetes - Participant answered ""suspect or possible""/""no"" to all questions and never indicated taking a diabetes medication1	Present - Participant answered ""yes"" to one or more questions OR reported taking diabetes medication"
+"Yes, No, Unknown, Not Applicable, Not Reported"
+"List: Patient refusal, Medical contraindication, Equipment unavailability, Patient non-cooperation, Other"
+Any real number within the clinically observed range
+1. Failure to attend follow-ups2. Non-adherence to medication protocol3. Refusal to undertake required tests4. Breach of study confidentiality 5. Inappropriate behavior towards staff or other participants6. Relocation or inability to travel to study site7. Inability to understand or cooperate with protocol requirements8. Falsification of study data or records9. Consent withdrawal10. Ineligibility due to protocol deviation.
+"Dictionary: 1: Not at all, 2: A little, 3: Somewhat, 4: Very much"
+"min: 30, max: 360, unit: Minutes"
+"Never attended/Kindergarten only: Never attended/Kindergarten only. 1st Grade: 1st Grade. 2nd Grade: 2nd Grade. 3rd Grade: 3rd Grade. 4th Grade: 4th Grade. 5th Grade: 5th Grade. 6th Grade: 6th Grade. 7th Grade: 7th Grade. 8th Grade: 8th Grade. 9th Grade: 9th Grade. 10th Grade: 10th Grade. 11th Grade: 11th Grade. 12th Grade, no diploma: 12th Grade, no diploma. High school graduate: High school graduate. GED or equivalent: GED or equivalent. Some college, no degree: Some college, no degree. Associate degree: occupational, technical, or vocational program: Associate degree: occupational, technical, or vocational program. Associate degree: academic program: Associate degree: academic program. Bachelor's degree (e.g., BA, AB, BS, BBA): Bachelor's degree (e.g., BA, AB, BS, BBA). Master's degree (e.g., MA, MS, MEng, MEd, MBA): Master's degree (e.g., MA, MS, MEng, MEd, MBA). Professional school degree (e.g., MD, DDS, DVM, JD): Professional school degree (e.g., MD, DDS, DVM, JD). Doctoral degree (e.g., PhD, EdD): Doctoral degree (e.g., PhD, EdD). Unknown: Unknown"
+: Range from 0 to 100
+18.0 to 18.2
+Standard|Modified|Custom
+"Dictionary:     1: ""I eat when I am upset.""    2: ""I eat when I am bored.""    3: ""I eat when I am lonely.""    4: ""I eat when I am happy.""    5: ""I eat when I am anxious.""    6: ""I eat when I am stressed.""    7: ""I eat when I am tired.""    8: ""I eat when I am celebrating.""   "
+"For {surg_hx_#}  are ""Yes"" or ""No"". For {surg_hx_#_yr}  would be any year between 1900 and the current year.For {surg_hx_#_comments}, {surg_hx_#_type}, the  could be any alphanumeric character entries; this field tends to be free text, describing specific details related to the procedure, such as event, complications, place, or other qualitative information.Note: Replace '#' with corresponding number for each surgical history."
+"List: Open, Closed, Partially Open"
+15 - 60 mL/m²
+"min: 1, max: 10, unit: Numeric Rating Scale (1-10)"
+[nms1]+[nms2]+[nms3]+[nms4]+[nms5]+[nms6]+[nms7]+[nms8]+[nms9]+[nms10]+[nms11]+[nms12]+[nms13]+[nms14]+[nms15]+[nms16]+[nms17]+[nms18]+[nms19]+[nms20]+[nms21]+[nms22]+[nms23]+[nms24]+[nms25]+[nms26]+[nms27]+[nms28]+[nms29]+[nms30]
+Non-negative numerical values (ng/L)
+"min: 1.5, max: 2, unit: log units"
+1. Early stage 2. Mild stage 3. Moderate stage 4. Severe stage
+- Normal- Abnormal- Inconclusive- Not Done
+0 - 50 kg
+"min: 0, max: 100, unit: percentage"
+1. Aging2. Noise exposure3. Genetic causes4. Infections5. Medical conditions (Specify: __________)6. Unknown7. Not applicable or Declined to Answer
+0-3600 seconds
+Improved|No Change|Worsened
+"min: 0, max: N/A, unit: count"
+"1. Anxiety2. Depression3. Post-traumatic stress disorder (PTSD)4. Obsessive-compulsive disorder (OCD)5. Agoraphobia6. Insomnia7. Panic attacks8. Substance abuse9. Suicidal thoughts10. Social isolation/loneliness11. Adjustment disorders12. Acute stress reaction13. Fear/phobia 14. Grief/bereavement15. Eating disorders (e.g., anorexia, bulimia)16. Sleep disorders17. Personality disorders18. Bipolar disorder19. Schizophrenia20. Other specified mental health symptoms21. None22. Unknown"
+Yes: Yes. No: No. Not applicable: Not applicable
+0.10 - 10.00 L/sec
+Any positive continuous numeric value
+"List: Brain, Spinal Cord, Upper Limbs, Lower Limbs, Bulbar Region, Respiratory Muscles"
+"List: Not at all, A little, Somewhat, Quite a bit, Extremely"
+ 1. Never2. Less than once a year3. A few times a year4. Once a month5. A few times a month6
+"0-64 ounces, Not at all satiated - Extremely satiated"
+A1|A2|A3|A4|A5|A6|A7|A8|A9|A10|A11|A12|B1|B2|B3|B4|B5|B6|B7|B8|B9|B10|B11|B12|C1|C2|C3|C4|C5|C6|C7|C8|C9|C10|C11|C12|D1|D2|D3|D4|D5|D6|D7|D8|D9|D10|D11|D12|E1|E2|E3|E4|E5|E6|E7|E8|E9|E10|E11|E12|F1|F2|F3|F4|F5|F6|F7|F8|F9|F10|F11|F12|G1|G2|G3|G4|G5|G6|G7|G8|G9|G10|G11|G12|H1|H2|H3|H4|H5|H6|H7|H8|H9|H10|H11|H12
+"1. Congestive Heart Failure2. Heart Disease3. High Blood Pressure4. Stroke5. Peripheral Artery Disease6. Vascular Dementia7. Mitral Valve Prolapse8. Abnormal Heart Rhythm9. Blood Clots / Deep Vein Thrombosis10. Pulmonary Embolism11. Atherosclerosis12. Aortic Aneurysm13. Varicose Veins14. Angina15. Myocardial Infarction (Heart Attack)16. No Circulatory Conditions17. Other, please specify"
+0.6 cm - 2.0 cm
+500-2000 mL
+15.0-22.6
+(y>=0) & (y<=28)
+0 - 24
+- Yes- No- Unknown- Not Applicable
+"1, Edythe Wiggs|2, Laura Segala|3, Paul Feddio (spelling)|4, Other"
+1. Carotid Endarterectomy2. Carotid Artery Stenting3. Hybrid procedure (combining Endarterectomy and Stenting)4. TransCarotid Artery Revascularization5. Carotid Angioplasty6. Not Performed7. Unknown
+0-74
+ 1. Cyclosporine2.
+Continuous measurement from 1 second to 86400 seconds (24 hours)
+1: Not at all. 2: A little bit. 3: Somewhat. 4: Quite a bit. 5: Very much
+1: Nasal Swab. 2: Throat Swab. 3: Blood Sample. 4: Saliva
+"List: 0, 1, 2"
+"min: 0, max: N/A, unit: episodes"
+Strongly Disagree|Disagree|Neutral|Agree|Strongly Agree
+(y>=0) & (y<=90)
+4: 13-25X. 5: 26+times. 1: No. 2: 1-2X. 3: 3-12X
+Datatype: DatePermissible_Values: Any valid date from 01-01-1900 to the present day
+No|Yes
+"'Yes', 'No', 'Unknown'"
+Any real number (including decimals) ranging from -5 to +5
+"Datatype: DatePermissible Values: Any valid date from January 1, 1940 (considering the history of modern cancer therapy) to present day."
+"0: Strongly Disagree  
+1: Disagree  
+2: Neutral  
+3: Agree  
+4: Strongly Agree  "
+Caudate: Caudate. Globus Pallidus: Globus Pallidus. Putamen: Putamen. Thalamus: Thalamus
+No: No. Yes: Yes. Not applicable: Not applicable. Unknown: Unknown
+"of words a child knows. It is a quantitative variable measured in discrete units (i.e., number of words).Permissible_values: 0 -"
+Gait: Gait. Gait on heels: Gait on heels. Gait on toes: Gait on toes
+"0, 1, 2, 3, 4"
+0-86400
+"confocal, SIM, 2-photon, lightsheet, regular microscopy, scan"
+Normal|Hypertrophy|Dilation
+"[""No"", ""Yes"", ""Refused"", ""Don't know""]"
+Data Type: Alphanumeric (string)Permissible Values: N/A
+Frontal: Frontal. Parietal: Parietal. Temporal: Temporal. Occipital: Occipital
+CMAP immediately: CMAP immediately. CMAP 10 seconds: CMAP 10 seconds. CMAP 20 seconds: CMAP 20 seconds. CMAP 30 seconds: CMAP 30 seconds. CMAP 40 seconds: CMAP 40 seconds. CMAP 50 seconds: CMAP 50 seconds. CMAP 60 seconds: CMAP 60 seconds
+1. Yes 2. No3. Unknown
+"Range: min: 0, max: 100, unit: %"
+"min: 0, max: 60, unit: errors"
+Acute Concussion Evaluation.Datatype: NumericPermissible Values:
+"List: No impact, Slightly longer, Moderately longer, Significantly longer, Frequent breaks required"
+"min: 0, unit: seconds"
+Bottle A|Bottle B|Bottle C
+"min: 0, max: 50, unit: °C"
