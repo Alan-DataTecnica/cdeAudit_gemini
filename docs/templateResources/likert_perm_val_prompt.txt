@@ -1,0 +1,34 @@
+Instruction: Generate a set of Likert-scale permissible values in a standardized numerical format suitable for assessing the subject '{{ title }}'. Consider the subject matter deeply to create a scale that is precisely relevant, while keeping in mind the general categories of frequency, agreement, quality, and intensity.
+
+### Data Element Details ###
+Title: 
+"""
+ {{read}}
+"""
+
+### Guidance for Generating Custom Likert-Scale Values ###
+- Develop a response set that matches the context and specificity of '{{ title }}'.
+- Use the structured numerical format (0 to 4), with each point clearly defined:
+   - 0: Represents the least or lowest intensity/agreement/quality/frequency.
+   - 4: Represents the most or highest intensity/agreement/quality/frequency.
+- While you may create custom descriptions for each value point, ensure they follow the logical progression from 0 to 4.
+
+### Examples of Likert-Scale Formats to Inspire ###
+1. **Frequency**:
+   - 0: Never, 1: Rarely, 2: Sometimes, 3: Often, 4: Always
+2. **Agreement**:
+   - 0: Strongly Disagree, 1: Disagree, 2: Neutral, 3: Agree, 4: Strongly Agree
+3. **Quality**:
+   - 0: Very Poor, 1: Poor, 2: Average, 3: Good, 4: Excellent
+4. **Intensity**:
+   - 0: None, 1: Mild, 2: Moderate, 3: Severe, 4: Extremely Severe
+
+### Task ###
+- Reflect on the nature of '{{ title }}' and create a set of Likert-scale values that are uniquely suited to it. Consider if modifications to the example categories or entirely new categories are needed based on the subject matter.
+- Ensure each value is concisely described and maintains the format of progressive intensity or frequency from least to most.
+
+***Draft a set of custom Likert-scale permissible values for '{{ title }}', presenting them in a standardized numerical format. Ensure the descriptions are clear and directly related to the subject.***
+
+{% if additional_context %}
+- Additional Context: {{ additional_context }}
+{% endif %}

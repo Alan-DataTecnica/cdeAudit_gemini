@@ -1,0 +1,45 @@
+Instruction: Analyze the provided data elements and permissible value sets for '{{ title }}', and convert them into a standardized JSON format suitable for data entry. The JSON object should strictly adhere to the format rules given below without any additional text or explanation.
+
+Data Element: '{{ title }}'{{ ', ' + gpt4_title if gpt4_title }}
+Question Text: '{{ preferred_question_text }}'{{ ', ' + gpt4_preferred_question_text if gpt4_preferred_question_text }}
+
+### Current Permissible Value Sets ###
+- Primary set: '{{ permissible_values }}'
+- Alternate set: '{{ gpt4_permissible_values }}'
+
+### Conversion Examples ###
+1. **Numerical Range** (e.g., "10-50 kg"):
+   - Format: {"value_format": "range", "min": "lower value", "max": "upper value", "unit": "unit"}
+2. **Date Range** (ISO 8601 format, e.g., "2020-01-01 to 2020-12-31"):
+   - Format: {"value_format": "date_range", "start": "start date", "end": "end date"}
+3. **Specific Date** (ISO 8601 format, e.g., "2020-01-01"):
+   - Format: {"value_format": "date", "date": "specified date"}
+4. **Categorical Data** (e.g., "Male, Female, Non-Binary"):
+   - Format: {"value_format": "categorical", "options": ["Option1", "Option2",...], "multi_select": true/false}
+5. **Numerical List** (e.g., "1, 2, 3"):
+   - Format: {"value_format": "numerical_list", "values": [1, 2, 3], "unit": "optional unit"}
+6. **Dictionary** (e.g., "Key1:Value1, Key2:Value2"):
+   - Format: {"value_format": "dictionary", "entries": {"Key1": "Value1", "Key2": "Value2"}}
+7. **Binary Options** (e.g., "Yes, No"):
+   - Format: {"value_format": "binary", "permissible_values": [true, false]}
+8. **Unrestricted Text**:
+   - Format: {"value_format": "free_entry", "text": "text"}
+
+### Instructions ###
+- Cannot catergorize as 'free-entry' if there is a perimissible value set or numerical values.
+- Select the most suitable format based on the data provided.
+- Construct the JSON object according to the selected format rule.
+- Ensure all values are accurate and compliant with the data's context and scientific standards.
+
+***Output should be a valid JSON object without any additional text.***
+
+{% if additional_context %}
+- Additional context: {{ additional_context }}
+{% endif %}
+
+{% if selected_columns_data %}
+- Relevant column data:
+{% for col, value in selected_columns_data.items() %}
+  - {{ col }}: {{ value }}
+{% endfor %}
+{% endif %}

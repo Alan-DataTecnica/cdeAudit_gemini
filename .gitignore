@@ -1,0 +1,16 @@
+# Ignore all files in the outputs directory
+outputs/
+
+# Ignore all files in the cdeCatalogs directory
+cdeCatalogs/
+
+# Ignore conda’s environment directory
+.conda/
+
+.env
+
+.logs/
+
+.mapping/
+
+.stage3_adjudication_output/

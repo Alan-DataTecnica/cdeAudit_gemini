@@ -1,0 +1,15 @@
+2025-06-20 16:02:47,637 - INFO - [<module>] - Successfully loaded environment variables from .env file.
+2025-06-20 16:02:47,637 - INFO - [<module>] - Successfully loaded GOOGLE_API_KEY.
+2025-06-20 16:02:47,637 - INFO - [run_single_test] - --- Running Single Test for Group: grp_0 ---
+2025-06-20 16:02:47,637 - INFO - [load_cde_catalog] - Loading processed CDE catalog from: outputs/stage_1/cde_catalog_processed.csv
+2025-06-20 16:02:49,813 - INFO - [load_and_validate_communities] - Attempting to load and validate community file from: outputs/stage_2/community_definitions.json
+2025-06-20 16:02:49,850 - INFO - [load_and_validate_communities] - --- Community File Validation SUCCESS ---
+2025-06-20 16:02:49,850 - INFO - [load_and_validate_communities] - Total Parent Communities: 49
+2025-06-20 16:02:49,850 - INFO - [load_and_validate_communities] - Total Subdivided Groups: 1,111
+2025-06-20 16:02:49,850 - INFO - [load_and_validate_communities] - Community Size (min/avg/max): 192 / 5543.3 / 32322
+2025-06-20 16:02:49,867 - INFO - [run_single_test] - Creating temporary cache for single test...
+2025-06-20 16:02:49,867 - INFO - [create_cache_via_rest] - Attempting to create cache via REST...
+2025-06-20 16:02:52,096 - INFO - [create_cache_via_rest] - Cache created successfully: cachedContents/c1ypgwjwj49fcxre36jzrd6yo1cyw72ulnam7h29
+2025-06-20 16:02:52,097 - INFO - [run_single_test] - Calling process_group directly for the test group...
+2025-06-20 16:07:00,435 - ERROR - [log_error] - Logged critical error for group grp_0. See stage3_adjudication_output/error_log.txt.
+2025-06-20 16:07:00,435 - INFO - [delete_cache] - Deleting cache: cachedContents/c1ypgwjwj49fcxre36jzrd6yo1cyw72ulnam7h29...

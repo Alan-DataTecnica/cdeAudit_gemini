@@ -1,0 +1,20 @@
+2025-06-20 19:34:12,718 - INFO - [run_test] - --- STARTING SINGLE TEST (Pass 1, Group: grp_1267) ---
+2025-06-20 19:38:42,139 - INFO - [run_test] - --- STARTING SINGLE TEST (Pass 1, Group: grp_1267) ---
+2025-06-20 19:38:44,127 - INFO - [create_cache_via_rest] - Attempting to create cache 'test_cache_grp_1267' via REST...
+2025-06-20 19:38:44,390 - ERROR - [log_error] - Logged critical error for group CACHE_CREATE. See stage3_adjudication_output/logs/error_log.txt.
+2025-06-20 19:38:44,391 - ERROR - [run_test] - An error occurred during the test run: Test failed: Cache creation returned None.
+Traceback (most recent call last):
+  File "/media/alanlong/t7/DataTecnica/Projects/geminiCDEs/singleCallTest.py", line 125, in run_test
+    raise Exception("Test failed: Cache creation returned None.")
+Exception: Test failed: Cache creation returned None.
+2025-06-20 19:38:44,392 - INFO - [run_test] - --- SINGLE TEST (Pass 1, Group: grp_1267) COMPLETE ---
+2025-06-20 19:50:25,909 - INFO - [run_test] - --- STARTING SINGLE TEST (Pass 1, Group: grp_1267) ---
+2025-06-20 19:50:27,870 - INFO - [create_cache_via_rest] - Attempting to create cache 'test_cache_grp_1267' via REST...
+2025-06-20 19:50:29,277 - INFO - [create_cache_via_rest] - Cache created successfully: cachedContents/gyptq6hydsdl9xosxqh1wlr29liejr3wzyldpi1h
+2025-06-20 19:52:44,243 - INFO - [delete_cache] - Deleting cache: cachedContents/gyptq6hydsdl9xosxqh1wlr29liejr3wzyldpi1h...
+2025-06-20 19:52:44,652 - INFO - [run_test] - --- SINGLE TEST (Pass 1, Group: grp_1267) COMPLETE ---
+2025-06-23 10:25:17,475 - INFO - [run_test] - --- STARTING SINGLE TEST (Pass 1, Group: grp_1267) ---
+2025-06-23 10:25:17,475 - INFO - [run_test] - --- OPERATING IN DRY RUN MODE ---
+2025-06-23 10:25:17,475 - INFO - [run_test] - Using model specified in shared_utils.py: 'models/gemini-2.5-pro'
+2025-06-23 10:25:19,465 - INFO - [count_tokens_via_rest] - Calling countTokens endpoint for a dry run...
+2025-06-23 10:25:19,904 - INFO - [run_test] - --- SINGLE TEST (Pass 1, Group: grp_1267) COMPLETE ---

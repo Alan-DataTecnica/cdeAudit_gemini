@@ -1,0 +1,11 @@
+pandas
+numpy
+google-genai
+sentence_transformers
+community
+networkx
+faiss-cpu
+tdqm
+pydantic
+json_repair
+streamlit

@@ -1,0 +1,40 @@
+original_expression,standardized_pv,standardized_unit,standardized_value_format,standardized_value_mapping
+"“0: No, 1: Yes”",No|Yes,N/A,categorical,"{""0"": ""No"", ""1"": ""Yes""}"
+"Free Text",,N/A,Free text,
+"Oral, Intravenous, Topical, Inhalation, Subcutaneous, Intramuscular, Transdermal, Sublingual, Rectal, Vaginal, Ophthalmic, Otic, Nasal, Buccal, Intradermal","Oral|Intravenous|Topical|Inhalation|Subcutaneous|Intramuscular|Transdermal|Sublingual|Rectal|Vaginal|Ophthalmic|Otic|Nasal|Buccal|Intradermal",N/A,categorical,
+"Nan",,N/A,N/A,
+"“0: Negative, 1: Positive”",Negative|Positive,N/A,categorical,"{""0"": ""Negative"", ""1"": ""Positive""}"
+"50-400 mg/dL","(y>=50) & (y<=400)",mg/dL,numeric,"{""min"": 50, ""max"": 400, ""unit"": ""mg/dL""}"
+"0.00 - 3.00 mmol/L","(y>=0.00) & (y<=3.00)",mmol/L,numeric,"{""min"": 0.00, ""max"": 3.00, ""unit"": ""mmol/L""}"
+"Yes, No, Unknown",Yes|No|Unknown,N/A,categorical,
+"'Male', 'Female', 'Other', 'Unknown'",Male|Female|Other|Unknown,N/A,categorical,
+"1, 2, 3, 4, 5, 6, 7, 8, 9, 10","1|2|3|4|5|6|7|8|9|10",N/A,ordinal,
+"Yes, No",Yes|No,N/A,categorical,
+"0 (None), 1 (Mild), 2 (Moderate), 3 (Severe)","None|Mild|Moderate|Severe",N/A,ordinal,"{""0"": ""None"", ""1"": ""Mild"", ""2"": ""Moderate"", ""3"": ""Severe""}"
+"Mild, Moderate, Severe",Mild|Moderate|Severe,N/A,categorical,
+"- Yes- No- Unknown",Yes|No|Unknown,N/A,categorical,
+"""Present"", ""Absent""",Present|Absent,N/A,categorical,
+"Low, Moderate, High",Low|Moderate|High,N/A,categorical,
+"0 (Normal), 1 (Mild Impairment), 2 (Moderate Impairment), 3 (Severe Impairment), 4 (Profound Impairment)","Normal|Mild Impairment|Moderate Impairment|Severe Impairment|Profound Impairment",N/A,ordinal,"{""0"": ""Normal"", ""1"": ""Mild Impairment"", ""2"": ""Moderate Impairment"", ""3"": ""Severe Impairment"", ""4"": ""Profound Impairment""}"
+"Very Good, Somewhat Good, Neither, Somewhat Bad, Very Bad","Very Good|Somewhat Good|Neither|Somewhat Bad|Very Bad",N/A,categorical,
+"Strongly Agree, Somewhat Agree, Neither, Somewhat Disagree, Strongly Disagree","Strongly Agree|Somewhat Agree|Neither|Somewhat Disagree|Strongly Disagree",N/A,categorical,
+",“0 = None, 1 = Mild symptoms: present but causes little distress or disturbance to patient, 2 = Moderate: Some distress or disturbance to patient, 3 = Severe: major source of distress or disturbance to patient”","None|Mild symptoms: present but causes little distress or disturbance to patient|Moderate: Some distress or disturbance to patient|Severe: major source of distress or disturbance to patient",N/A,ordinal,"{""0"": ""None"", ""1"": ""Mild symptoms: present but causes little distress or disturbance to patient"", ""2"": ""Moderate: Some distress or disturbance to patient"", ""3"": ""Severe: major source of distress or disturbance to patient""}"
+"“1 = Rarely (<1/wk), 2=  Often (1/wk), 3 = Frequent (several times per week), 4 = Very Frequent (daily or all the time)”","Rarely (<1/wk)|Often (1/wk)|Frequent (several times per week)|Very Frequent (daily or all the time)",N/A,ordinal,"{""1"": ""Rarely (<1/wk)"", ""2"": ""Often (1/wk)"", ""3"": ""Frequent (several times per week)"", ""4"": ""Very Frequent (daily or all the time)""}"
+"“No””, “”Yes””, “”Refused””, “”Don't know”",No|Yes|Refused|Don't know,N/A,categorical,
+",“No””, “”Yes””, “”Refused””, “”Unknown”",No|Yes|Refused|Unknown,N/A,categorical,
+",“none””, “”a little””, “”some””, “”a lot””, “”unable to do”",none|a little|some|a lot|unable to do,N/A,categorical,
+"(y>0)&(y<10000)","(y>0)&(y<10000)",N/A,numeric,"{""min"": 0, ""exclusive_min"": true, ""max"": 10000, ""exclusive_max"": true}"
+"mm/dd/yyyy",,N/A,YYYY-MM-DD,
+"Yyyy-mm-dd",,N/A,YYYY-MM-DD,
+"“List: Mild, Moderate, Severe”",Mild|Moderate|Severe,N/A,categorical,
+"Yes, limited a lot    Yes, limited a little    No, not limited at all","Yes limited a lot|Yes limited a little|No not limited at all",N/A,categorical,
+"Yes    No",Yes|No,N/A,categorical,
+"All of the time    Most of the time    Some of the time    A little of the time    None of the time","All of the time|Most of the time|Some of the time|A little of the time|None of the time",N/A,categorical,
+"   0: Never, 1: Occasionally, 2: Sometimes, 3: Often, 4: Always or cannot do at all","Never|Occasionally|Sometimes|Often|Always or cannot do at all",N/A,ordinal,"{""0"": ""Never"", ""1"": ""Occasionally"", ""2"": ""Sometimes"", ""3"": ""Often"", ""4"": ""Always or cannot do at all""}"
+"mm/dd/yyyy",,N/A,YYYY-MM-DD,
+"Yes, No",Yes|No,N/A,categorical,
+"1. Yes2. No",Yes|No,N/A,categorical,"{""1"": ""Yes"", ""2"": ""No""}"
+"Alive, Deceased, Unknown",Alive|Deceased|Unknown,N/A,categorical,
+"{""value"": 0, ""labels"": [""No"", ""False"", ""Absent""]}, {""value"": 1, ""labels"": [""Yes"", ""True"", ""Present""]}",No|Yes,N/A,categorical,"[{""value"": 0, ""labels"": [""No"", ""False"", ""Absent""]}, {""value"": 1, ""labels"": [""Yes"", ""True"", ""Present""]}]"
+"True , False",True|False,N/A,boolean,
+"True/False OR 0/1",True|False,N/A,boolean,"{""0"": ""False"", ""1"": ""True""}"

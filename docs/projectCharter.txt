@@ -1,0 +1,51 @@
+Of course. Here is an updated Project Charter. It preserves the original mission and principles while detailing the implementation of the completed stages to provide full context for the team working on Stage 3.
+
+---
+
+### **Project Charter: CDE Standardization Pipeline (v2.0)**
+
+#### **1. Guiding Principles & Goals**
+
+[cite_start]**Primary Goal:** To create a highly efficient, automated, and robust pipeline for standardizing a large catalog of Common Data Elements (CDEs), with a focus on improving data quality and identifying redundancy[cite: 17].
+
+[cite_start]**Core Philosophy:** Our approach is guided by four key principles that have shaped the implementation of every stage[cite: 18]:
+
+* [cite_start]**Efficiency:** Every design choice must minimize token usage, monetary cost, and total runtime[cite: 18]. [cite_start]We favor intelligent pre-processing to reduce the burden on the AI model[cite: 19].
+* [cite_start]**Robustness:** The pipeline must be resilient to failures[cite: 19]. [cite_start]It is designed to be restartable, ensuring that an interruption does not require starting the entire process from scratch[cite: 20].
+* [cite_start]**Simplicity & Modularity:** The system is broken into simple, independent stages[cite: 21]. [cite_start]Each component has a single, well-defined responsibility, making it easy to develop, test, and maintain[cite: 22].
+* [cite_start]**Intelligence:** We aim to go beyond simple field edits[cite: 23]. [cite_start]The pipeline is designed to understand the nuanced relationships between CDEs, allowing it to correctly identify true duplicates while respecting necessary variations within a functional family of elements[cite: 23].
+
+#### **2. The 4-Stage Pipeline Architecture**
+
+[cite_start]The project is implemented as a linear sequence of four distinct, check-pointed stages[cite: 24]. Stages 1 and 2 are complete, providing the foundation for the current work in Stage 3.
+
+* **Stage 1: Pre-processing & Filtering (Completed)**
+    * [cite_start]**Input:** The raw, complete CDE catalog[cite: 25].
+    * [cite_start]**Implementation:** This stage applies a set of quality heuristics to flag CDEs that are candidates for review (e.g., those with missing descriptions or invalid variable names)[cite: 26]. A key lesson learned was that explicit, auditable methods are superior to complex, inferred logic. Therefore, a dictionary-based mapping file was implemented to deterministically standardize the `permissible_values` field, a major source of initial data quality issues.
+    * [cite_start]**Output:** The original CDE catalog, augmented with a `needs_audit` flag for downstream processing[cite: 27].
+
+* **Stage 2: Graph-Based Community Detection (Completed)**
+    * [cite_start]**Input:** The full, flagged CDE catalog from Stage 1[cite: 28].
+    * [cite_start]**Implementation:** This stage intelligently groups CDEs into contextually rich "communities" to enable high-level reasoning in Stage 3[cite: 29]. To achieve this, a multi-faceted knowledge graph was built where each CDE is a node. [cite_start]Edges between nodes were weighted using a multiplicative boosting strategy that combines multiple facets of similarity[cite: 30]:
+        1.  **Semantic Weight:** Cosine similarity between text embeddings of key fields (`title`, `short_description`, etc.).
+        2.  **Lexical Weight:** Levenshtein distance or Jaccard similarity between `variable_name` fields to catch typos.
+        3.  **Structural Weight:** A score based on matching `value_format` and `permissible_values` formats.
+    * [cite_start]A Louvain community detection algorithm was then run on the graph to identify dense clusters of related CDEs[cite: 31]. To respect the technical constraints of the AI model, any community larger than a set size (`MAX_COMMUNITY_SIZE`) was automatically subdivided using a "Hub-and-Spoke" model. This ensures no single input to the AI is too large, while maintaining context by including the "hub" CDE in each sub-group.
+    * [cite_start]**Output:** A JSON file containing the final CDE "communities" to be sent for AI review[cite: 32].
+
+* **Stage 3: AI-Powered Adjudication (Current Stage)**
+    * [cite_start]**Input:** The JSON file of CDE communities from Stage 2[cite: 33].
+    * [cite_start]**Mandate:** The Stage 3 team is responsible for developing a parallelized Python script that sends each community to the Gemini API[cite: 34]. [cite_start]The prompt will instruct the model to perform detailed analysis, including filling empty fields, standardizing values, and flagging redundant CDEs[cite: 5, 6]. [cite_start]The output must be a single, flat JSON array of suggestions for each CDE[cite: 2, 3]. [cite_start]A critical component of this stage is the manifest file for tracking the status of each API call to ensure the process is fully restartable[cite: 36, 42].
+    * [cite_start]**Output:** A directory of raw JSON responses from the API, one for each successfully processed community[cite: 37].
+
+* **Stage 4: Post-processing & Integration (Upcoming)**
+    * [cite_start]**Input:** The directory of raw JSON responses and the original CDE catalog[cite: 38].
+    * [cite_start]**Process:** A script will parse all JSON responses, using Pydantic models for strict validation[cite: 39]. [cite_start]The validated suggestions will then be merged back into the main CDE catalog[cite: 40].
+    * [cite_start]**Output:** The final, enriched CDE catalog as a CSV file[cite: 41].
+
+#### **3. Key Implementation Best Practices**
+
+* [cite_start]**State Management & Restartability:** The use of checkpoint files (e.g., pickled graph objects in Stage 2) and a "manifest" file (in Stage 3) is critical for ensuring that long-running or expensive processes are idempotent and can recover gracefully from any interruption[cite: 42].
+* [cite_start]**Structured I/O:** All AI model interactions must request JSON mode, and all responses will be validated against Pydantic models to ensure data integrity and prevent errors in the final integration stage[cite: 43].
+* [cite_start]**Configuration & Testing:** The pipeline supports a `--dry-run` mode for rapid testing[cite: 44]. [cite_start]System prompts are version-controlled to ensure reproducibility[cite: 45].
+* [cite_start]**Monitoring:** The cost and performance of every API call will be logged to a CSV file, enabling detailed analysis and optimization[cite: 45].

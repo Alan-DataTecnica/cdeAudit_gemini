@@ -1,0 +1,25 @@
+Instruction: Create a question based on the title and permissible response values provided for '{{ title }}'. The question should be structured to be answered using a Likert-scale format.
+
+### Data Element Details ###
+Title:
+"""
+ {{read}}
+"""
+
+### Question Structure ###
+- Phrase the question in a way that directly references the subject of the '{{ title }}', ensuring that it is clear and understandable.
+- The question should encourage respondents to evaluate or express their level of agreement, frequency, or intensity related to the subject.
+
+### Likert-Scale Response Set ###
+- Permissible Responses: {{ permissible_values }}
+
+### Guidance for Creating the Question ###
+- Consider the context and main focus of the data element when framing the question.
+- Ensure that the question is neutral and does not lead the respondent toward a specific answer.
+- The format of the question should be compatible with the response set, allowing for clear and straightforward selection from the options provided.
+
+***Draft the question and present it below, clearly formatted to show how it would appear to a respondent.***
+
+{% if additional_context %}
+- Additional Context: {{ additional_context }}
+{% endif %}

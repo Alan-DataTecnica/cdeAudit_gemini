@@ -1,0 +1,59 @@
+Instruction: Analyze the provided biomedical term and context holistically to define key-value pairs in JSON format. Use the following steps:
+
+1. **Contextual Review**: Consider all definable information, including `title`, `unit_of_measure`, `minimum_value`, `maximum_value`, `permissible_values`, and `value_is_binary`. Use this information to logically infer the most suitable value format.
+
+2. **Set `value_format`**:
+   - "range" if both `minimum_value` and `maximum_value` are definable.
+   - "list" if a set of specific permissible values exists.
+   - "binary" if values are mutually exclusive.
+   - "unrestricted text" only if no other format is definable.
+   
+3. **Populate Fields Based on `value_format`**:
+   - If `value_format` is "range", define `minimum_value` and `maximum_value`.
+   - If `value_format` is "list", populate `permissible_value_set`.
+   - If `value_format` is "binary", set permissible values as "True" and "False."
+   
+4. **Final Coherence Check**: Ensure that all fields align logically with `value_format` and that `N/A` is used only if no other values are definable.
+
+JSON Output:
+
+{
+    "title": "{{ title }}",
+    {% if unit_of_measure %}
+    "unit_of_measure": "{{ unit_of_measure }}",
+    {% endif %}
+    {% if minimum_value and value_format == "range" %}
+    "minimum_value": "{{ minimum_value }}",
+    {% elif not minimum_value %}
+    "minimum_value": "N/A",
+    {% endif %}
+    {% if maximum_value and value_format == "range" %}
+    "maximum_value": "{{ maximum_value }}",
+    {% elif not maximum_value %}
+    "maximum_value": "N/A",
+    {% endif %}
+    "value_format": "{% if minimum_value and maximum_value %}range{% elif permissible_values %}list{% elif value_is_binary %}binary{% else %}unrestricted text{% endif %}",
+    "permissible_value_set": [
+        {% if minimum_value and maximum_value %}
+        {"min": {{ minimum_value }}, "max": {{ maximum_value }}}
+        {% elif permissible_values %}
+        {% for value in permissible_values %}
+        "{{ value }}"{% if not loop.last %}, {% endif %}
+        {% endfor %}
+        {% elif value_is_binary %}
+        "True", "False"
+        {% else %}
+        "free text"
+        {% endif %}
+    ],
+    {% if additional_context %}
+    "additional_context": "{{ additional_context }}",
+    {% endif %}
+    {% if selected_columns_data %}
+    "additional_column_data": {
+        {% for col, value in selected_columns_data.items() %}
+        "{{ col }}": "{{ value }}"{% if not loop.last %}, {% endif %}
+        {% endfor %}
+    }
+    {% endif %}
+}

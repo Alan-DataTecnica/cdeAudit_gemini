@@ -1,0 +1,54 @@
+Instruction: Based on the title, short description, and preferred question text provided for '{{ title }}', determine the most appropriate value format for data entry. Do not attempt to convert any data; simply select the value format that best fits the description and context.
+
+### Data Element Details ###
+Term:
+"""
+ {{input_column}}
+"""
+- Short Description:
+"""
+ {{short_description}}
+"""
+- Preferred Question Text:
+"""
+ {{preferred_question_text}}
+"""
+
+### Possible Value Formats ###
+1. **Numerical Continuous** - Use for continuous numerical data that can take any value within a range and can be meaningfully divided into smaller increments. Ideal for measurements like weight, height, and salary.2. **Numerical Discrete** - Use for sets of distinct numbers without any ranges.
+3. **Date** - Use for specific dates.
+4. **Date Range** - Use for spans of dates.
+5. **Categorical** - Use for data with a set list of category options.
+6. **Dictionary** - Use for data represented as key-value pairs.
+7. **Binary** - Use for yes/no, true/false type data.
+8. **Free Entry** - Use for data that allows any textual input.
+
+### Selection Criteria ###
+- Evaluate the data context and requirement based on the description.
+- Ensure the chosen format aligns with how the data is used or recorded.
+- Consider the specificity and granularity needed based on the preferred question text.
+
+***Provide the chosen value format as a simple text response without any explanation***
+
+{% if additional_context %}
+- Additional Context: {{ additional_context }}
+{% endif %}
+
+{% if selected_columns_data %}
+- Relevant Column Data:
+{% for col, value in selected_columns_data.items() %}
+  - {{ col }}: {{ value }}
+{% endfor %}
+{% endif %}
+
+{% if usr_added_prompt_txt %}
+Additional context provided by the user:
+{{ usr_added_prompt_txt }}
+{% endif %}
+
+{% if usr_selected_context_cols %}
+Additional column data:
+{% for col, value in usr_selected_context_cols.items() %}
+- {{ col }}: {{ value }}
+{% endfor %}
+{% endif %}

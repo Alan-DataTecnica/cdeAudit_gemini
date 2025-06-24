@@ -1,0 +1,10 @@
+2025-06-16 15:43:19,763 - INFO - [<module>] - Successfully loaded GOOGLE_API_KEY.
+2025-06-16 15:43:20,036 - INFO - [_init_num_threads] - Note: NumExpr detected 12 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2025-06-16 15:43:20,037 - INFO - [_init_num_threads] - NumExpr defaulting to 8 threads.
+2025-06-16 15:43:20,335 - INFO - [main] - --- CDE Harmonization: Stage 3 ---
+2025-06-16 15:43:20,336 - INFO - [create_cache_via_rest] - Attempting to create cache 'cde_harmonization_cache_main'...
+2025-06-16 15:43:21,231 - INFO - [create_cache_via_rest] - Cache created successfully: cachedContents/00jbzwxcejku6elp2w70ae81b8975kqsw47uhwng
+2025-06-16 15:43:28,578 - INFO - [main] - Starting adjudication for 2198 groups...
+2025-06-16 21:13:08,688 - INFO - [delete_cache] - Deleting cache: cachedContents/00jbzwxcejku6elp2w70ae81b8975kqsw47uhwng...
+2025-06-16 21:13:09,047 - INFO - [delete_cache] - Successfully sent delete request for cache: cachedContents/00jbzwxcejku6elp2w70ae81b8975kqsw47uhwng
+2025-06-16 21:13:09,047 - INFO - [main] - Stage 3 processing finished.
