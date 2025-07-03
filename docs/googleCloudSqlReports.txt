@@ -1,0 +1,112 @@
+# Google Cloud SQL Connection Troubleshooting Report
+
+## Summary of Issues Encountered
+
+We encountered persistent connection issues when attempting to connect to a Google Cloud SQL PostgreSQL instance for data migration. The primary issues were:
+
+1. Initial connection timeout attempting to connect directly to the IP address
+2. Authorization issues with the Cloud SQL Proxy
+3. Region/zone format error in the connection string
+4. TLS/encryption issues during large data transfers
+5. Database existence issues due to confusion between instance name and database name
+
+## Chronological Troubleshooting Process
+
+### 1. Initial Connection Timeout
+- Initial error: "Connection to server at '23.236.62.139', port 5432 failed: Connection timed out"
+- Determined this was due to attempting direct connection without proper network authorization
+- Identified the need to use Cloud SQL Proxy as a more secure and flexible connection method
+
+### 2. Cloud SQL Admin API Configuration
+- Discovered the Cloud SQL Admin API was not enabled on the project
+- Enabled the API: `gcloud services enable sqladmin.googleapis.com`
+- Listed the available Cloud SQL instances, identifying "cde-review-dev" with IP 34.28.193.155
+
+### 3. Cloud SQL Proxy Setup
+- Downloaded and installed the Cloud SQL Proxy: `curl -o cloud-sql-proxy https://storage.googleapis.com/cloud-sql-connectors/cloud-sql-proxy/v2.8.1/cloud-sql-proxy.linux.amd64`
+- Made it executable: `chmod +x cloud-sql-proxy`
+- Encountered authorization issues despite being project owner
+
+### 4. IAM Permission Issues
+- Added explicit Cloud SQL Admin role: `gcloud projects add-iam-policy-binding formal-rookery-462807-k6 --member=user:rlong0587@gmail.com --role=roles/cloudsql.admin`
+- Created a dedicated service account with Cloud SQL Admin role
+- Generated a service account key for more reliable authentication
+
+### 5. Connection String Format Error
+- Identified incorrect region/zone format in connection string
+- Changed from `formal-rookery-462807-k6:us-central1-c:cde-review-dev` to `formal-rookery-462807-k6:us-central1:cde-review-dev`
+- Proxy successfully started listening on localhost:5432
+
+### 6. Database Creation and Configuration
+- Initially confused instance name (cde-review-dev) with database name
+- Created the actual database "cde-review-dev" on the instance
+- Successfully connected to the database and created schema using DDL file
+
+### 7. Data Migration Issues
+- Encountered TLS error during data migration: "error reading from instance: remote error: tls: bad record MAC"
+- Error occurred during bulk data transfer using COPY command
+- The proxy version did not support the `--no-verify-server-certificate` flag
+- Suggested batch size reduction and alternative data loading methods
+
+## Technical Details
+
+### Environment Configuration
+- Local OS: Pop_OS (Linux)
+- Google Cloud Project: formal-rookery-462807-k6
+- Cloud SQL Instance: cde-review-dev (PostgreSQL 17)
+- Instance Location: us-central1-c
+- Instance IP: 34.28.193.155
+- Database name: cde-review-dev
+- Authentication: Service account key with Cloud SQL Admin role
+
+### Connection Methods Tried
+1. Direct IP connection (failed due to network restrictions)
+2. Cloud SQL Proxy with application default credentials (failed with authorization issues)
+3. Cloud SQL Proxy with service account key (succeeded with connection but failed during large data transfer)
+
+### Authentication Methods Tried
+1. User account authentication (rlong0587@gmail.com)
+2. Application default credentials
+3. Service account key file
+
+### Successful Connection Command
+```bash
+./cloud-sql-proxy --port 5432 --credentials-file=cloud-sql-key.json formal-rookery-462807-k6:us-central1:cde-review-dev
+```
+
+### Database Schema Creation
+Successfully created the database schema using the DDL file:
+```bash
+psql -h localhost -U postgres -d "cde-review-dev" -f docs/cdeCatalog.ddl
+```
+
+## Final Status
+
+1. **Cloud SQL Proxy Connection**: Successful
+2. **Database Connection**: Successful
+3. **Schema Creation**: Successful
+4. **Data Migration**: Failed during bulk transfer with TLS error
+
+## Recommendations for Further Investigation
+
+1. **Proxy Logging Enhancement**:
+   - Run with additional diagnostic flags to increase logging verbosity
+   - Check Cloud SQL instance logs in Google Cloud Console for server-side errors
+
+2. **TLS/SSL Configuration**:
+   - Investigate SSL requirements and configuration on the Cloud SQL instance
+   - Check if SSL is required by the instance and if certificates need to be configured
+
+3. **Network Configuration**:
+   - Verify VPC and network settings that might be affecting data transfer
+   - Check for network policies that might be interrupting large data transfers
+
+4. **Alternative Connection Methods**:
+   - Try using the gcloud proxy command for comparison: `gcloud sql connect cde-review-dev --user=postgres`
+   - Test connection using a GUI tool like pgAdmin to isolate if it's a client-specific issue
+
+5. **Cloud SQL Instance Configuration**:
+   - Review instance configuration parameters, particularly those related to connections and timeouts
+   - Check instance resource allocation (CPU/memory) to ensure it can handle large data operations
+
+This report documents all steps taken and issues encountered during the troubleshooting process. The most critical unresolved issue is the TLS error during large data transfers, which requires further investigation with enhanced logging and potentially Google Cloud support.

@@ -1,0 +1,553 @@
+759	iq_hollingshead_ses_score	Hollingshead Socioeconomic Status Score	Hollingshead Socioeconomic Status Score from the Inpatient Questionnaires, assessing socioeconomic status. Expected answers are numerical scores based on occupation and education levels.	"Questionnaire: Hollingshead Four Factor Index of Socioeconomic Status
+
+Question: What is the patient's Hollingshead Socioeconomic Status (SES) score?
+
+Permissible Answers: Numerical score based on the Hollingshead Four Factor Index criteria."	Range: min: 8, max: 66, unit: score	score	Numerical Discrete	Hollingshead Index|Hollingshead SES Score|Hollingshead SES Score, Hollingshead Social Status, SES Score, Socioeconomic Status Score, Hollingshead Index, SES Index|Hollingshead Social Status|SES Index|SES Score|Socioeconomic Status Score		CRISPi|Clinical|Demographics		
+760	iq_hollingshead_ses_done	Inpatient Questionnaire Hollingshead Socioeconomic Status Completed	Hollingshead Socioeconomic Status Questionnaire; assesses completion status. Expected permissible answers: Yes, No.	"Hollingshead SES: Has the Hollingshead Socioeconomic Status (SES) measure been completed for this patient? 
+
+Permissible answers: Yes, No"	List: Yes, No		Binary	Hollingshead_SES_Completion|Hollingshead_SES_Status|IQ_Hollingshead_SES_Complete|IQ_Hollingshead_SES_Complete,Hollingshead_SES_Completion,Hollingshead_SES_Status,SES_Questionnaire_Done|SES_Questionnaire_Done		CRISPi|Clinical|Study Protocol & Administration		
+761	iq_parent_cbcl_done	Inpatient Questionnaire Parent Child Behavior Checklist Completion Status	Child Behavior Checklist (CBCL) completion status by parent. Expected permissible answers: Yes, No.	"Questionnaire: Child Behavior Checklist (CBCL)
+
+Question: Has the parent completed the Child Behavior Checklist (CBCL) for the patient?
+
+Permissible Answers: Yes, No"	List: Yes, No		Binary	IQ_PARENT_CBCL_COMPLETED|IQ_PARENT_CBCL_COMPLETED, IQ_PARENT_CBCL_SUBMITTED, IQ_PARENT_CBCL_FINISHED, IQ_PARENT_CBCL_DONE_FLAG, IQ_PARENT_CBCL_STATUS|IQ_PARENT_CBCL_DONE_FLAG|IQ_PARENT_CBCL_FINISHED|IQ_PARENT_CBCL_STATUS|IQ_PARENT_CBCL_SUBMITTED		CRISPi|Clinical|Patient-Reported Outcomes|Study Protocol & Administration		
+763	iq_cbcl_social	Child Behavior Checklist Social Competence	Child Behavior Checklist (CBCL) Social Competence Scale; assesses child's social competence; permissible answers: Not True, Somewhat True, Very True	"Questionnaire: Child Behavior Checklist (CBCL)
+Question: ""How often does the child have problems getting along with other children?""
+Permissible answers: 
+- 0 (Not True)
+- 1 (Somewhat or Sometimes True)
+- 2 (Very True or Often True)"	List: 0, 1, 2		categorical	CBCL_Social|CBCL_Social, CBCL_Social_Score, CBCL_Social_Scale, Child_Behavior_Checklist_Social, Child_Behavior_Checklist_Social_Score, Child_Behavior_Checklist_Social_Scale|CBCL_Social_Scale|CBCL_Social_Score|Child_Behavior_Checklist_Social|Child_Behavior_Checklist_Social_Scale|Child_Behavior_Checklist_Social_Score		CRISPi|Clinical|Patient-Reported Outcomes		
+764	iq_cbcl_school	Child Behavior Checklist School Competence	Child Behavior Checklist (CBCL) - School Competence: Assesses the child's performance and behavior in school. Permissible answers typically include ratings such as "Not True," "Somewhat/Sometimes True," and "Very True/Often True."	"Questionnaire: Child Behavior Checklist (CBCL)
+
+Question: How well is the child doing in school?
+
+Permissible Answers:
+- 0 = Failing
+- 1 = Below average
+- 2 = Average
+- 3 = Above average"	List: 0: Not True (as far as you know), 1: Somewhat or Sometimes True, 2: Very True or Often True		categorical	CBCL_Academic_Performance|CBCL_School|CBCL_School,CBCL_School_Performance,CBCL_School_Question,CBCL_Academic_Performance,CBCL_School_Assessment|CBCL_School_Assessment|CBCL_School_Performance|CBCL_School_Question		CRISPi|Clinical|Patient-Reported Outcomes		
+765	iq_cbcl_total	Child Behavior Checklist Total Score	Child Behavior Checklist (CBCL) Inpatient Questionnaire: Total problems score, expected permissible answers are numerical scores reflecting the total sum of problem items endorsed.	"Questionnaire: Child Behavior Checklist (CBCL)
+
+Question: What is the total score on the Child Behavior Checklist (CBCL) for this patient?
+
+Permissible Answers: Numerical score ranging from 0 to 100"	Questionnaire: Child Behavior Checklist (CBCL)Question: Total Problems ScoreRange: min: 0, max: 100, unit: score		Numerical Continuous	CBCL_TOTAL|CBCL_TOT_SCORE|IQ_CBCL_SCORE|IQ_CBCL_TOT|IQ_CBCL_TOT, IQ_CBCL_SCORE, CBCL_TOTAL, CBCL_TOT_SCORE		CRISPi|Clinical|Patient-Reported Outcomes		
+766	iq_cbcl_competence_t	Child Behavior Checklist Competence Total Score	Child Behavior Checklist (CBCL) Competence Total Score, expected answers: numerical score.	"Questionnaire: Child Behavior Checklist (CBCL)
+Question: How would you rate the child's competence in activities, social relationships, and school performance?
+Permissible Answers: 0 - Not at all, 1 - Somewhat, 2 - Very"	List: 0: Not True (as far as you know), 1: Somewhat or Sometimes True, 2: Very True or Often True		Categorical	CBCL_Comp_T|CBCL_Competence_Total|CBCL_Competence_Total,CBCL_Comp_T,Child_Behavior_Checklist_Competence_Total|Child_Behavior_Checklist_Competence_Total		CRISPi|Clinical|Patient-Reported Outcomes		
+767	iq_cbcl_internal	Child Behavior Checklist Internalizing Problems Score	Child Behavior Checklist (CBCL) Internalizing Problems score; expected answers: range from 0 (no problems) to higher scores indicating more severe problems.	"Questionnaire: Child Behavior Checklist (CBCL) Inpatient Questionnaire
+
+Question: ""In the past 6 months, how often has the child displayed internalizing behaviors such as anxiety, depression, or withdrawal?""
+
+Permissible Answers:
+- 0 = Not True (as far as you know)
+- 1 = Somewhat or Sometimes True
+- 2 = Very True or Often True"	List: Very True or Often True, Somewhat or Sometimes True, Not True		categorical	CBCL Internal|CBCL Internalizing|CBCL Internalizing Problems|CBCL Internalizing Scale|CBCL Internalizing, CBCL Internal, Child Behavior Checklist Internalizing, Child Behavior Checklist Internal, CBCL Internalizing Problems, CBCL Internalizing Scale|Child Behavior Checklist Internal|Child Behavior Checklist Internalizing		CRISPi|Clinical|Patient-Reported Outcomes		
+768	iq_cbcl_internal_t	Child Behavior Checklist Internalizing Problems T-Score	Child Behavior Checklist (CBCL) Internalizing Problems T-score; expected permissible answers: numerical T-score values.	"Questionnaire: Child Behavior Checklist (CBCL)
+
+Question: How often does the patient exhibit internalizing behaviors such as anxiety, depression, or withdrawal?
+
+Permissible Answers: 
+- Never
+- Sometimes
+- Often
+- Very Often"	Questionnaire: Child Behavior Checklist (CBCL)Question: Internalizing Problems Total ScoreRange: min: 0, max: 100		Numerical Continuous	CBCL Int Score|CBCL Internal T|CBCL Internalizing T|CBCL Internalizing T-score|CBCL Internalizing T-score, CBCL Internalizing T, Child Behavior Checklist Internalizing T-score, Child Behavior Checklist Internalizing T, CBCL Internal T, CBCL Int T-score|Child Behavior Checklist Internalizing Problems Score|Child Behavior Checklist Internalizing Score		CRISPi|Clinical|Patient-Reported Outcomes		
+770	iq_cbcl_external_t	CBCL Externalizing T-Score	Child Behavior Checklist (CBCL) Inpatient Questionnaire, Externalizing Problems Total Score. Permissible answers: numerical score range.	"Questionnaire: Child Behavior Checklist (CBCL)
+Question: Please rate the following statement: ""My child exhibits externalizing behaviors such as aggression or rule-breaking.""
+Permissible Answers: 0 (Not True), 1 (Somewhat or Sometimes True), 2 (Very True or Often True)"	Questionnaire: Child Behavior Checklist (CBCL)Question: Externalizing Problems Total ScoreRange: min: 0, max: 100, unit: score	T-score	Numerical Continuous	CBCL Ext T-score|CBCL Externalizing T-score|CBCL Externalizing T-score, CBCL Ext T-score, Child Behavior Checklist Externalizing T-score, Child Behavior Checklist Ext T-score|Child Behavior Checklist Ext T-score|Child Behavior Checklist Externalizing T-score		CRISPi|Clinical|Patient-Reported Outcomes		
+771	iq_total_score	Intelligence Quotient Total Score	The total score calculated from the Inpatient Questionnaire, representing the aggregate of responses to all questions. Permissible answers are numerical values reflecting the sum of individual item scores.	"Questionnaire: Inpatient Questionnaire (IQ)
+
+Question: What is the patient's total score on the Inpatient Questionnaire (IQ)?
+
+Expected Permissible Answers: Numeric value (e.g., 0-100)"	Range: min: 40, max: 160, unit: none		Numerical Discrete	IQ Score|IQ Total|IQ Total, IQ Score, Inpatient Questionnaire Total Score, Inpatient Total Score, IQT Score, IQTS, Inpatient Q Total Score|IQT Score|IQTS|Inpatient Q Total Score|Inpatient Questionnaire Total Score|Inpatient Total Score		CRISPi|Clinical|Cognitive		
+772	iq_cbcl_total_t	CBCL Total T-Score	Child Behavior Checklist (CBCL) Total Score T-value. Expected permissible answers: Numeric T-score values.	"Questionnaire: Child Behavior Checklist (CBCL)
+Question: What is the total T-score from the Child Behavior Checklist (CBCL)?
+Permissible answers: Numeric value (e.g., 50, 65)"	List: 50, 60, 70, 80, 90, 100, 110, 120, 130, 140, 150	Score	Numerical Discrete	CBCL T-Score|CBCL Total|CBCL Total Score|CBCL Total, CBCL Total Score, Child Behavior Checklist Total, Child Behavior Checklist Total Score, CBCL T-Score, CBCL Total T-Score|Child Behavior Checklist Total|Child Behavior Checklist Total Score		CRISPi|Clinical|Patient-Reported Outcomes		
+773	iq_child_depress_invent_done	Child Depression Inventory Completion Status	Indicates whether the Child Depression Inventory (CDI) questionnaire was completed. Expected permissible answers: Yes, No.	"Is the Children's Depression Inventory (CDI) completed for this patient?  
+- Yes  
+- No"	List: Yes, No		Binary	CDI_Completed|CDI_Completion_Status|CDI_Done|Child_Depress_Inventory_Status|Child_Depression_Inventory_Completed|IQ_CDI_DONE|IQ_CDI_DONE, Child_Depression_Inventory_Completed, CDI_Completion_Status, Child_Depress_Inventory_Status, CDI_Done, CDI_Completed		CRISPi|Clinical|Patient-Reported Outcomes|Study Protocol & Administration		
+774	iq_child_depression_neg_mood	Inpatient Questionnaire Child Depression Negative Mood	This variable refers to a question from the Inpatient Questionnaire for Children regarding negative mood symptoms as part of a depression assessment. Expected permissible answers typically include a range such as "Not at all," "Several days," "More than half the days," and "Nearly every day."	"Questionnaire: Inpatient Child Depression Questionnaire
+
+Question: Over the past two weeks, how often has your child felt down, depressed, or hopeless?
+
+Permissible Answers:
+1. Not at all
+2. Several days
+3. More than half the days
+4. Nearly every day"	List: Never, Rarely, Sometimes, Often, Always		categorical	CHILD_DEPRESSION_NEGATIVE_MOOD|CHILD_DEPRESSION_NEG_MOOD_QUESTION|CHILD_DEP_NEG_MOOD|INPATIENT_CHILD_DEPRESSION_NEGATIVE_MOOD|IQ_CHILD_DEP_NEG_MOOD|IQ_CHILD_DEP_NEG_MOOD, IQ_DEP_NEG_MOOD, CHILD_DEP_NEG_MOOD, CHILD_DEPRESSION_NEGATIVE_MOOD, INPATIENT_CHILD_DEPRESSION_NEGATIVE_MOOD, CHILD_DEPRESSION_NEG_MOOD_QUESTION, IQ_CHILD_DEP_NEG_MOOD_QUESTION|IQ_CHILD_DEP_NEG_MOOD_QUESTION|IQ_DEP_NEG_MOOD		CRISPi|Clinical|Patient-Reported Outcomes		
+775	iq_child_depress_interp_prob	Inpatient Questionnaire Child Depression Interpretation Problem	The variable pertains to the Inpatient Questionnaire Child Depression section, specifically addressing interpretation problems. Expected permissible answers are likely categorical, such as "Yes" or "No."	"Questionnaire: Inpatient Questionnaire for Child Depression
+
+Question: Has the child experienced any problems with interpreting or understanding others' intentions or emotions? 
+
+Expected Permissible Answers: Yes, No, Unsure"	List: Not at all, Several days, More than half the days, Nearly every day		categorical	Child Depress Interp Prob|Child Depression Interpretation Problems|IQ Child Depress Interp Prob|IQCDIP|IQCDIP, Child Depression Interpretation Problems, Inpatient Child Depression Interpretation Problems, Child Depress Interp Prob, Inpatient Child Depress Interp, IQ Child Depress Interp Prob|Inpatient Child Depress Interp|Inpatient Child Depression Interpretation Problems		CRISPi|Clinical|Patient-Reported Outcomes		
+776	iq_child_depression_ineffect	Inpatient Questionnaire Child Depression Ineffectiveness	"Questionnaire: Inpatient Questionnaire - Child Depression
+Question: Do you often feel like you can't do anything right?
+Permissible Answers: Yes, No"	"Questionnaire: Inpatient Questionnaire - Child Depression
+
+Question: How often do you feel that you are unable to do anything right?
+
+Permissible Answers:
+1. Never
+2. Rarely
+3. Sometimes
+4. Often
+5. Always"	List: Not at all, Several days, More than half the days, Nearly every day		Categorical	Child_Depression_Effectiveness|Child_Depression_Efficacy|Child_Depression_Ineff|Child_Depression_Ineffectiveness|IQ_Child_Depression_Effectiveness|IQ_Child_Depression_Efficacy|IQ_Child_Depression_Ineff|IQ_Child_Depression_Ineffectiveness|IQ_Child_Depression_Ineffectiveness, IQ_Child_Depression_Ineff, IQ_Child_Depression_Efficacy, IQ_Child_Depression_Effectiveness, Child_Depression_Ineffectiveness, Child_Depression_Ineff, Child_Depression_Efficacy, Child_Depression_Effectiveness		CRISPi|Clinical|Patient-Reported Outcomes		
+779	total_score_cdi	Total Score from the Cognitive Dysfunction Inventory	Children's Depression Inventory (CDI) total score, reflecting the overall severity of depressive symptoms in children. Expected permissible answers: numerical score ranging from 0 to 54.	"Questionnaire: Children's Depression Inventory (CDI)
+
+Question: What is the total score on the Children's Depression Inventory (CDI) for the patient?
+
+Expected Permissible Answers: Numerical value (0-54)"	Dictionary: Questionnaire: Children's Depression Inventory (CDI), Question: Total Score, Key1: 0-10 (No or minimal depression), Key2: 11-20 (Mild depression), Key3: 21-30 (Moderate depression), Key4: 31-40 (Severe depression), Key5: 41-54 (Very severe depression)	points	Numerical Continuous	CDI_SCORE|CDI_TOTAL|CDI_TOTAL_SCORE|CDI_TOT_SCORE|TOTAL_CDI_SCORE|TOTAL_SCORE, CDI_TOTAL, CDI_SCORE, CDI_TOTAL_SCORE, TOTAL_CDI_SCORE, CDI_TOT_SCORE		Clinical|Patient-Reported Outcomes		
+780	qewp_self_done	Questionnaire on Eating and Weight Patterns Self-Report Completion Status	Eating Disorder Examination Questionnaire (EDE-Q), question: "Have you been deliberately trying to limit the amount of food you eat to influence your weight or shape?" Expected permissible answers: Yes, No.	"Questionnaire: Eating Disorder Examination Questionnaire (EDE-Q)
+Question: ""Have you made yourself sick (vomited) as a means of controlling your shape or weight?""
+Permissible Answers: ""Yes"" or ""No"""	List: Yes, No		Binary	Eating and Weight Patterns Questionnaire|QEWP|QEWP, Questionnaire on Eating and Weight Patterns, Eating and Weight Patterns Questionnaire, Self-Done, Self-Administered|Questionnaire on Eating and Weight Patterns|Self-Administered|Self-Done		Clinical|Patient-Reported Outcomes|Study Protocol & Administration		
+782	iq_qewp_self_d	Questionnaire on Eating and Weight Patterns Self-Report - D	Questionnaire on Eating and Weight Patterns (QEWP) - Self-Report: "Have you felt distressed about your eating habits?" Permissible answers: Yes, No.	"Questionnaire: Inpatient Questionnaire
+
+Question: ""During the past week, how often did you feel depressed?""
+
+Permissible Answers: 
+1. Never
+2. Rarely
+3. Sometimes
+4. Often
+5. Always"	Dictionary: 1: Never, 2: Rarely, 3: Sometimes, 4: Often, 5: Always		Categorical	D|IQ|IQ, QEWP, SELF, D|QEWP|SELF		CRISPi|Clinical|Patient-Reported Outcomes		
+783	iq_qewp_self_e	Inpatient Questionnaire QEWP Self-Evaluation	"Questionnaire: Inpatient Questionnaire
+Question: ""Have you ever experienced a worsening of your condition?""
+Permissible Answers: Yes, No"	"Questionnaire: Eating Disorder Questionnaire  
+Question: ""During the past 28 days, how many times have you made yourself sick (vomit) as a means of controlling your shape or weight?""  
+Permissible Answers: Numeric response (0-28 or more)"	List: Never, Rarely, Sometimes, Often, Very Often		Numerical Discrete	IQ_EWPSelfEval_E|IQ_EWPSelfReport_E|IQ_EWPSelf_E|IQ_EWPSelf_E, InpatientQ_EWPSelf_E, InptQ_EWPSelf_E, IQ_EWPSelfEval_E, IQ_EWPSelfReport_E|InpatientQ_EWPSelf_E|InptQ_EWPSelf_E		CRISPi|Clinical|Patient-Reported Outcomes		
+784	iq_qewp_self_3	Inpatient Questionnaire QEWP Self-Assessment Question 3	"Questionnaire: Inpatient Questionnaire (IQ)
+Question: During the past week, how often did you feel worthless?
+Permissible Answers: Never, Rarely, Sometimes, Often, Always"	"Questionnaire: Inpatient Questionnaire for Emotional Well-being and Perception (IQ_EWP)
+
+Question: How often have you felt hopeless in the past two weeks?
+
+Permissible Answers:
+1. Never
+2. Rarely
+3. Sometimes
+4. Often
+5. Always"	Questionnaire: QEWP (Questionnaire on Eating and Weight Patterns)Question: In the past 6 months, how often have you gone on eating binges during which you ate an unusually large amount of food in a short period of time?List: Never, Less than once a month, 1-3 times a month, Once a week, 2-6 times a week, Once a day or more		categorical	IQ_QEWP_SELF_THREE|IQ_QEWP_SELF_THREE, Inpatient_Questionnaire_QEWP_Self_3, IQ_QEWP_Self_Question_3, Inpatient_QEWP_Self_Question_3|IQ_QEWP_Self_Question_3|Inpatient_QEWP_Self_Question_3|Inpatient_Questionnaire_QEWP_Self_3		CRISPi|Clinical|Patient-Reported Outcomes		
+787	iq_qewp_self_i	Inpatient Questionnaire QEWP Self-Reported Item I	"Questionnaire: Inpatient Questionnaire (IQ)
+Question: Self-Reported Emotional Well-being
+Permissible Answers: Yes, No, Sometimes"	"Questionnaire: Inpatient Questionnaire for Early Warning Signs of Psychosis (IQ-EWP)
+
+Question: Have you experienced any unusual or disturbing thoughts about yourself recently?
+
+Permissible Answers: 
+- Yes
+- No"	List: 1: Strongly Disagree, 2: Disagree, 3: Neither Agree nor Disagree, 4: Agree, 5: Strongly Agree		categorical	IQ_QEWP_SELF_I|IQ_QEWP_SELF_I, Inpatient Questionnaire - Self Report, Inpatient Self-Evaluation, Inpatient Self-Assessment|Inpatient Questionnaire - Self Report|Inpatient Self-Assessment|Inpatient Self-Evaluation		CRISPi|Clinical|Patient-Reported Outcomes		
+790	iq_qewp_self_k	Questionnaire on Eating and Weight Patterns Self-Report - Question K	"Questionnaire: Inpatient Questionnaire (IQ)
+Question: Have you ever felt that you were overweight?
+Permissible Answers: Yes, No"	"Questionnaire: Inpatient Questionnaire on Eating and Weight Patterns (IQ_EWP)
+
+Question: ""How often do you feel that you cannot control what or how much you eat?""
+
+Permissible Answers:
+1. Never
+2. Rarely
+3. Sometimes
+4. Often
+5. Always"	Dictionary: 0: Not at all, 1: Slightly, 2: Moderately, 3: Quite a bit, 4: Extremely		Categorical	IQ|IQ, QEWP_SELF, IQ_K, Inpatient Questionnaire, QEWP_SELF_K, IQ_QEWP, IQ_QEWP_SELF|IQ_K|IQ_QEWP|IQ_QEWP_SELF|Inpatient Questionnaire|QEWP_SELF|QEWP_SELF_K		CRISPi|Clinical|Patient-Reported Outcomes		
+791	iq_qewp_self_a	Questionnaire on Eating and Weight Patterns Self-Assessment Question A	"Questionnaire: Inpatient Questionnaire
+Question: Have you experienced any self-harm thoughts or behaviors?
+Permissible Answers: Yes, No"	"Questionnaire: Inpatient Questionnaire Eating and Weight Patterns
+
+Question: Do you often eat more rapidly than normal?
+
+Expected Permissible Answers: Yes, No"	Dictionary:     1: "I eat when I am upset."    2: "I eat when I am bored."    3: "I eat when I am lonely."    4: "I eat when I am happy."    5: "I eat when I am anxious."    6: "I eat when I am stressed."    7: "I eat when I am tired."    8: "I eat when I am celebrating."   		Categorical	IQ_QEWP_SELF_A|IQ_QEWP_SELF_A, Inpatient Questionnaire, Specific Question, Permissible Answers|Inpatient Questionnaire|Permissible Answers|Specific Question		CRISPi|Clinical|Patient-Reported Outcomes		
+795	iq_qewp_self_o	Inpatient Questionnaire QEWP Self-Reported Other	"Questionnaire: Inpatient Questionnaire for Well-Being and Perception (IQ_QEWP)
+Question: Self-assessment of overall well-being
+Permissible Answers: Scale from 1 (very poor) to 5 (excellent)"	"Questionnaire: Inpatient Questionnaire for Evaluating Well-being and Pain (IQ_EWP)
+
+Question: How would you rate your own overall well-being today?
+
+Permissible Answers:
+1. Very Poor
+2. Poor
+3. Fair
+4. Good
+5. Very Good"	Questionnaire: Questionnaire on Eating and Weight Patterns (QEWP)Question: Frequency of overeating in the past 6 monthsList: Never, Rarely, Sometimes, Often, Very Often		categorical	IQ_EWP_SELF_O, InpatientQ_EWP_SELF_O, InpatientQuestionnaire_EWP_SELF_O, InpatientQ_EWP_SelfAssessment_O, IQ_EWP_SelfAssessment_O		CRISPi|Clinical|Patient-Reported Outcomes		
+796	iq_qewp_self_p	Inpatient Questionnaire QEWP Self-Perception	"Questionnaire: Inpatient Questionnaire
+Question: How often during the past month did you feel hopeless?
+Permissible Answers: Never, Rarely, Sometimes, Often, Always"	"Questionnaire: Inpatient Questionnaire for Evaluation of Well-being and Perception (IQ-QEWP)
+
+Question: How would you rate your overall perception of your well-being during your hospital stay?
+
+Expected permissible answers:
+- Very Poor
+- Poor
+- Fair
+- Good
+- Very Good"	List: Never, Rarely, Sometimes, Often, Always		categorical	IQ|IQ, QEWP, Self-Perception|QEWP|Self-Perception		CRISPi|Clinical|Patient-Reported Outcomes		
+797	iq_qewp_self_q	Inpatient Questionnaire QEWP Self-Reported Question	"Questionnaire: Inpatient Questionnaire
+Question: ""Do you ever feel worthless or excessively guilty?""
+Permissible answers: Yes, No"	"Questionnaire: QEWP (Questionnaire on Eating and Weight Patterns)
+
+Question: Do you feel that your eating is out of control?
+
+Permissible Answers: 
+- Yes
+- No"	Dictionary: 1: Never2: Rarely3: Sometimes4: Often5: Very Often		Binary	IQ_QEWP_SELF_Q|IQ_QEWP_SELF_Q, Inpatient Questionnaire, Self-Questionnaire|Inpatient Questionnaire|Self-Questionnaire		CRISPi|Clinical|Patient-Reported Outcomes		
+798	iq_qewp_self_r	Questionnaire on Eating and Weight Patterns Self-Report	"Questionnaire: Inpatient Questionnaire (IQ)
+Question: How often do you feel worthless?
+Permissible Answers: Never, Rarely, Sometimes, Often, Always"	"Questionnaire: Inpatient Questionnaire on Emotional Well-being and Perception  
+Question: How would you rate your current emotional well-being?  
+Permissible Answers:  
+1 - Very Poor  
+2 - Poor  
+3 - Fair  
+4 - Good  
+5 - Very Good"	Dictionary: 1: Never, 2: Rarely, 3: Sometimes, 4: Often, 5: Always		categorical	IQ_Self_R|IQ_Self_Rep|IQ_Self_Reported|IQ_Self_Reported, Inpatient_Q_Self_Report, IQ_Self_R, InpatientQuestionnaire_SelfReport, IQ_Self_Rep|InpatientQuestionnaire_SelfReport|Inpatient_Q_Self_Report		CRISPi|Clinical|Patient-Reported Outcomes		
+799	iq_qewp_self_s	Questionnaire of Eating and Weight Patterns Self-Report Survey	"Questionnaire: Inpatient Questionnaire
+Question: ""Self-reported weight""
+Permissible answers: Numerical value in kilograms"	"Questionnaire: Inpatient Questionnaire for Self-Reported Data (IQ_QEWP_SELF_S)
+
+Question: Have you been feeling down, depressed, or hopeless for more than half the days over the past two weeks?
+
+Permissible Answers: 
+- Yes
+- No"	List: Strongly Disagree, Disagree, Neutral, Agree, Strongly Agree		categorical	IQ|IQ, QEWP, SELF, S|QEWP|S|SELF		CRISPi|Clinical|Patient-Reported Outcomes		
+800	iq_qewp_self_t	Inpatient Questionnaire QEWP Self-Reported Total	"Questionnaire: Inpatient Questionnaire
+Question: Have you experienced any episodes of self-harm?
+Permissible Answers: Yes, No"	"Which of the following best describes your current employment status? 
+- Full-time
+- Part-time
+- Unemployed
+- Retired
+- Student
+- Other"	List: Never, Rarely, Sometimes, Often, Always		Binary	IQ_QEWP_SELF_T|IQ_QEWP_SELF_T,Inpatient Questionnaire,Questionnaire on Eating and Weight Patterns,Self-Reported,Permissible Answers|Inpatient Questionnaire|Permissible Answers|Questionnaire on Eating and Weight Patterns|Self-Reported		CRISPi|Clinical|Demographics		
+803	iq_qewp_self_w	Inpatient Questionnaire QEWP Self-Reported Weight	"Questionnaire: Inpatient Questionnaire
+Question: ""In the past week, how would you rate your overall mental health?""
+Permissible Answers: 1 (Very Poor), 2 (Poor), 3 (Fair), 4 (Good), 5 (Very Good)"	"Questionnaire: Inpatient Questionnaire
+Question: How often do you feel worthless?
+Permissible Answers: 
+- Never
+- Rarely
+- Sometimes
+- Often
+- Always"	List: Never, Rarely, Sometimes, Often, Always		Categorical	IQ|IQ, QEWP, Self-Report, Weight, Inpatient Questionnaire, Self Weight|Inpatient Questionnaire|QEWP|Self Weight|Self-Report|Weight		CRISPi|Clinical|Patient-Reported Outcomes		
+804	iq_qewp_self_x	Inpatient Questionnaire QEWP Self-Report Question X	"Questionnaire: Inpatient Questionnaire
+Question: Self-report of weight
+Permissible Answers: Numeric weight in pounds or kilograms"	"Questionnaire: Inpatient Questionnaire for Weight Perception (IQ_QEWP)
+
+Question: How do you perceive your current weight?
+
+Expected Permissible Answers: 
+- Very underweight
+- Underweight
+- About right
+- Overweight
+- Very overweight"	Dictionary: 1: Never, 2: Rarely, 3: Sometimes, 4: Often, 5: Always		Categorical	IQ|IQ_QEWP_SELF|Inpatient Questionnaire|Inpatient Questionnaire, QEWP Self-Questionnaire, IQ, QEWP_SELF, IQ_QEWP_SELF|QEWP Self-Questionnaire|QEWP_SELF		CRISPi|Clinical|Patient-Reported Outcomes		
+806	iq_qewp_self_z	Inpatient Questionnaire: QEWP Self-Reported Z	"Questionnaire: Inpatient Questionnaire for Weight and Eating Patterns (IQ-QEWP)
+Question: Self-assessment of eating patterns
+Permissible answers: Yes, No"	"Questionnaire: Inpatient Questionnaire on Eating and Weight Patterns
+
+Question: How often do you weigh yourself?
+
+Expected Permissible Answers:
+- Never
+- Less than once a month
+- About once a month
+- About once a week
+- Several times a week
+- Daily"	List: Strongly Disagree, Disagree, Neutral, Agree, Strongly Agree		Categorical	IQ_QEWP_SELF_Z|IQ_QEWP_SELF_Z, Inpatient Questionnaire, Question on Eating and Weight Patterns, Self-report, Zero|Inpatient Questionnaire|Question on Eating and Weight Patterns|Self-report|Zero		CRISPi|Clinical|Patient-Reported Outcomes		
+807	qewp_parent_done	Questionnaire on Eating and Weight Patterns - Parent Completion Status	The Eating Disorder Examination-Questionnaire (EDE-Q): "Have you completed the parent questionnaire?" Expected answers: Yes, No.	"Questionnaire: Eating Disorder Examination Questionnaire (EDE-Q)
+
+Question: Has your parent completed the Eating Disorder Examination Questionnaire (EDE-Q)?
+
+Expected permissible answers:
+- Yes
+- No"	List: Yes, No		Binary	QEWP Parent Assessment|QEWP Parent Completed|QEWP Parent Completed, QEWP Parent Questionnaire, QEWP Parent Survey, QEWP Parent Form, QEWP Parent Assessment, QEWP Parent Done|QEWP Parent Done|QEWP Parent Form|QEWP Parent Questionnaire|QEWP Parent Survey		Clinical|Patient-Reported Outcomes|Study Protocol & Administration		
+810	iq_qewp_parent_d	Inpatient Questionnaire Eating Disorder Parent Duration	"Questionnaire: Inpatient Questionnaire (IQ)
+Question: Does the patient have a parent with a history of weight problems?
+Permissible Answers: Yes, No, Unknown"	"Questionnaire: Inpatient Questionnaire
+
+Question: Is there a history of parental depression?
+
+Permissible Answers: Yes, No"	List: No, Yes		Categorical	IQ Parent D|IQ Parent D, Inpatient Questionnaire Parent D, IQ Parent Domain|IQ Parent Domain|Inpatient Questionnaire Parent D		CRISPi|Clinical|Medical History & Events		
+812	iq_qewp_parent_f	Inpatient Questionnaire Eating Disorder Examination for Parents - Frequency	"Questionnaire: Inpatient Questionnaire
+Question: Are you the parent or guardian?
+Permissible answers: Yes, No"	"Questionnaire: Inpatient Questionnaire
+Question: Are you the parent or guardian of the patient?
+Permissible Answers: Yes, No"	Questionnaire: QEWP (Questionnaire on Eating and Weight Patterns)Question: "Have either of your parents ever had a problem with being overweight or obese?"List: Yes, No, Don't Know		categorical	IQ Questionaire|IQ Questionaire, Inpatient Questionaire, QEWP Parent, QEWP Parent Frequency, Inpatient QEWP Parent|Inpatient QEWP Parent|Inpatient Questionaire|QEWP Parent|QEWP Parent Frequency		CRISPi|Demographics|Study Protocol & Administration		
+814	iq_qewp_parent_h	Inpatient Questionnaire Eating Disorder Parent Questionnaire Question H	"Questionnaire: Inpatient Questionnaire
+Question: Does the patient have a history of parental hypertension?
+Permissible Answers: Yes, No, Unknown"	"Questionnaire: Inpatient Questionnaire for Evaluating Well-being of Parents (IQ-QEWP)
+
+Question: How would you rate your overall health in the past week?
+
+Expected Permissible Answers: 
+- Very Poor
+- Poor
+- Fair
+- Good
+- Very Good"	List: Never, Rarely, Sometimes, Often, Always		Categorical	IQ Par Hist|IQ Par Hx|IQ Parent History|IQ Parent History, IQ Parent Hx, IQ Par Hist, IQ Par Hx|IQ Parent Hx		CRISPi|Clinical|Patient-Reported Outcomes		
+815	iq_qewp_parent_i	Parent Interview Questionnaire for Quality of Life in Eating Disorders	"Questionnaire: Inpatient Questionnaire
+Question: Parent involvement in treatment decisions
+Permissible answers: Yes, No, Not applicable"	Which parent or guardian will be accompanying the patient during their inpatient stay?	List: Strongly Agree, Agree, Neutral, Disagree, Strongly Disagree		Categorical	Inpatient Questionnaire|Inpatient Questionnaire, Question EWP Parent I, Yes/No|Question EWP Parent I|Yes/No		CRISPi|Clinical|Study Protocol & Administration		
+816	iq_qewp_parent_k	Questionnaire on Eating and Weight Patterns Parent Form - Question K	"Questionnaire: Inpatient Questionnaire for Parents
+Question: ""Is your child currently taking any medication?""
+Permissible answers: Yes, No"	"Questionnaire: Inpatient Questionnaire for Eating and Weight Patterns (IQ-EWP)
+Question: Does the patient have a parent with a history of eating disorders?
+Permissible Answers: Yes, No, Unknown"	List: Never, Rarely, Sometimes, Often, Very Often		categorical	IQ Parent K|IQ Parent Knowledge|IQ Parent Knowledge, Inpatient Questionnaire Parent Knowledge, IQ Parent K, Inpatient Q Parent Knowledge|Inpatient Q Parent Knowledge|Inpatient Questionnaire Parent Knowledge		CRISPi|Clinical|Diagnoses|Medical History & Events		
+817	iq_qewp_parent_l	Inpatient Questionnaire QEWP Parent L	"Questionnaire: Inpatient Questionnaire
+Question: Please indicate the parental status.
+Permissible answers: Yes, No"	"Questionnaire: Inpatient Questionnaire for Evaluating Well-being of Parents
+
+Question: ""Have you experienced any significant stress or emotional challenges related to your child's hospitalization?""
+
+Expected Permissible Answers: 
+- Yes
+- No"	Dictionary: 1: Not at all, 2: A little, 3: Somewhat, 4: Very much		categorical	IQ Parent Living Situation|IQ Parent Living Situation,IQ Parent Living Status,Inpatient Questionnaire Parent Living Situation,Inpatient Questionnaire Parent Living Status|IQ Parent Living Status|Inpatient Questionnaire Parent Living Situation|Inpatient Questionnaire Parent Living Status		CRISPi|Clinical|Patient-Reported Outcomes		
+818	iq_qewp_parent_m	Inpatient Questionnaire Eating and Weight Patterns Parent Male	"Questionnaire: Inpatient Questionnaire
+Question: Parent's marital status
+Permissible answers: Married, Single, Divorced, Widowed"	"Questionnaire: Inpatient Questionnaire for Early Warning of Pediatric (IQ_EWP)
+Question: Is the parent or guardian of the patient present?
+Permissible Answers: Yes, No"	List: Strongly Disagree, Disagree, Neutral, Agree, Strongly Agree		categorical	IQ Parent M|IQ_QEWP_PARENT|IQ_QEWP_PARENT, IQ_QEWP_PARENT_M, QEWP_PARENT_M, Inpatient Questionnaire Parent, IQ Parent M|IQ_QEWP_PARENT_M|Inpatient Questionnaire Parent|QEWP_PARENT_M		CRISPi|Clinical|Study Protocol & Administration		
+819	iq_qewp_parent_m	Inpatient Questionnaire - Eating and Weight Patterns Parent Questionnaire - Month	"Questionnaire: Inpatient Questionnaire (IQ)
+Question: ""Is there a parent or guardian available to answer questions?""
+Permissible answers: Yes, No"	Which parent or guardian is accompanying the patient today?	List: Not at all, A little, Somewhat, Quite a bit, Very much			IQ_QEWP_PARENT_M,Inpatient Questionnaire,Parental Status,Yes,No		CRISPi		
+820	iq_qewp_parent_o	Inpatient Questionnaire Eating Disorder Examination Parent Perception of Overeating	"Questionnaire: Inpatient Questionnaire - Parent Version  
+Question: How often does your child express feelings of worthlessness or hopelessness?  
+Permissible Answers: Never, Rarely, Sometimes, Often, Always"	"Questionnaire: Inpatient Questionnaire for Evaluating Well-being of Parents (IQ-EWP)
+
+Question: How would you rate your overall well-being as a parent during your inpatient stay?
+
+Permissible Answers: 
+1. Very Poor
+2. Poor
+3. Fair
+4. Good
+5. Very Good"	Dictionary: 1: Never, 2: Rarely, 3: Sometimes, 4: Often, 5: Always		categorical	IQ_QEWP_PARENT_Observation|IQ_QEWP_PARENT_Observation, IQ_QEWP_PARENT_Outcome, IQ_QEWP_PARENT_Opinion|IQ_QEWP_PARENT_Opinion|IQ_QEWP_PARENT_Outcome		CRISPi|Clinical|Patient-Reported Outcomes		
+822	iq_qewp_parent_p	Inpatient Questionnaires Eating Disorder Examination Questionnaire Parent Permissible Answers	"Questionnaire: Inpatient Questionnaire (IQ)
+Question: Do you have a parent or guardian who is currently employed?
+Permissible Answers: Yes, No"	"Questionnaire: Inpatient Questionnaire for Evaluating Well-being and Parent Perception
+
+Question: How would you rate your overall well-being during your hospital stay?
+
+Permissible Answers: 
+1. Very Poor
+2. Poor
+3. Fair
+4. Good
+5. Very Good"	Dictionary:     1: Not at all    2: A little bit    3: Moderately    4: Quite a bit    5: Extremely			IQ_EWP_Parent_P, Inpatient_Questionnaire_Parent_P, Inpatient_Questionnaire_ParentPresence, IQ_ParentPresence_P, IQ_Parent_P		CRISPi		
+824	iq_qewp_parent_s	Inpatient Questionnaire Eating Disorder Examination - Parent Version - S	"Questionnaire: Inpatient Questionnaire
+Question: Are you the parent or guardian of the patient?
+Permissible Answers: Yes, No"	Which parent or guardian is completing this intake form?	List: Strongly Disagree, Disagree, Neutral, Agree, Strongly Agree		binary	Expected Permissible Answers|IQ_QEWP_PARENT_S|IQ_QEWP_PARENT_S, Inpatient Questionnaire, Question EWP Parent S, Expected Permissible Answers|Inpatient Questionnaire|Question EWP Parent S		CRISPi|Demographics|Study Protocol & Administration		
+825	iq_qewp_parent_t	Inpatient Questionnaire - QEWP Parent Question Text	"Questionnaire: Inpatient Questionnaire
+Question: Are you the parent or guardian of the patient?
+Permissible Answers: Yes, No"	"Questionnaire: Inpatient Questionnaire for Evaluating Well-being and Parent-Child Relationship
+
+Question: How would you describe the current relationship between you and your child?
+
+Expected Permissible Answers:
+- Excellent
+- Good
+- Fair
+- Poor"	List: 1: Strongly Disagree2: Disagree3: Neutral4: Agree5: Strongly Agree		Categorical	IQ_PARENT_Q_ANS|IQ_PARENT_Q_RESP|IQ_PRT_ANS|IQ_PRT_RESP|IQ_QEWP_PARENT_ANS|IQ_QEWP_PARENT_RESP|IQ_QEWP_PARENT_T|IQ_QEWP_PARENT_T, Inpatient Questionnaire, Parental Response, IQ_PRT_RESP, IQ_PRT_ANS, IQ_QEWP_PARENT_RESP, IQ_QEWP_PARENT_ANS, IQ_PARENT_Q_RESP, IQ_PARENT_Q_ANS|Inpatient Questionnaire|Parental Response		CRISPi		
+831	iq_qewp_parent_z	Inpatient Questionnaire Patient Living with Parent/Guardian	Indicates whether the patient lives with their parent(s) or guardian(s), as reported in the Inpatient Quality of Life Survey.	"Questionnaire: Inpatient Quality of Life Survey
+
+Question: Do you live with your parent(s) or guardian(s)?
+
+Permissible Answers:
+1. Yes
+2. No
+3. Prefer not to answer"	0:No|1:Yes|2:Prefer not to answer		categorical	IQ Parent Inpatient|IQ Parent Questionnaire|IQ_QEWP_PARENT_Z|IQ_QEWP_PARENT_Z, IQ Parent Questionnaire, Parent Inpatient Questionnaire, Inpatient Questionnaire Parent, IQ Parent Inpatient|Inpatient Questionnaire Parent|Parent Inpatient Questionnaire		Clinical|Demographics|["CRISPi"]		
+832	iq_qewp_parent_aa	Inpatient Questionnaire - QEWP - Parent - Question AA	"Questionnaire: Inpatient Questionnaire
+Question: Are you the parent?
+Permissible answers: Yes, No"	"Questionnaire: Inpatient Questionnaire (IQ)
+
+Question: Were either of your parents diagnosed with alcohol abuse?
+
+Permissible Answers: Yes, No, Don't Know"	List: Strongly Disagree, Disagree, Neutral, Agree, Strongly Agree		categorical	Alcohol Abuse|IQ|IQ, QEWP, Parent, Alcohol Abuse|Parent|QEWP		CRISPi|Diagnoses|Family History|Medical History & Events		
+834	iq_wqav_wt_question_adol_done	Inpatient Questionnaire Weight Question Adolescent Completed	Adolescent Weight Question: "Have you completed the weight assessment?" Expected answers: Yes, No.	"Questionnaire: Inpatient Questionnaire - Adolescent Version
+
+Question: Have you completed the weight assessment question?
+
+Expected permissible answers: Yes, No"	List: Yes, No		Binary	IQ_WQAV_WT_Q_ADOL_DONE|IQ_WQAV_WT_Q_ADOL_DONE, InpatientQuestionnaire_WeightQuestionAdolescentDone, IQ_WT_Adol_Completed, WQAV_WT_Adol_Completed, IQ_Weight_Adol_Done|IQ_WT_Adol_Completed|IQ_Weight_Adol_Done|InpatientQuestionnaire_WeightQuestionAdolescentDone|WQAV_WT_Adol_Completed		CRISPi|Clinical|Study Protocol & Administration		
+837	iq_wqav_work_school	Inpatient Questionnaire Work Quality Assessment Variable: Work or School	Work/school attendance in the past week (Inpatient Questionnaire Work Questionnaire). Expected answers: Yes, No, Not applicable.	Which questionnaire are you currently using to collect information about the patient's ability to work or attend school?	List: Employed full-time, Employed part-time, Unemployed, Student, Retired, Homemaker, Unable to work		Categorical	IQ Work/School|IQ_WQAV_WORK_SCH|IQ_WQAV_WORK_SCH, Inpatient Questionnaire Work/School Activity, Work/School Activity, Work/School Q, IQ Work/School, Work/School Permissible Answers|Inpatient Questionnaire Work/School Activity|Work/School Activity|Work/School Permissible Answers|Work/School Q		CRISPi|Clinical|Demographics		
+841	iq_wqav_activities_day_living	Inpatient Questionnaire: Weekly Quality Assessment Variables, Activities of Daily Living	"Questionnaire: Inpatient Questionnaire (IQ)
+Question: What activities of daily living were you able to perform today?
+Permissible Answers: List of specific daily activities (e.g., bathing, dressing, eating) with corresponding response options (e.g., independently, with assistance, unable)."	"Questionnaire: Inpatient Quality of Life Questionnaire
+
+Question: How would you rate your ability to perform activities of daily living?
+
+Permissible Answers:
+- 1: Very Poor
+- 2: Poor
+- 3: Fair
+- 4: Good
+- 5: Very Good"	Dictionary: 1: Needs No Help, 2: Needs Some Help, 3: Needs A Lot of Help, 4: Unable to Do		categorical	IQ_WQAV_ADL|IQ_WQAV_ADL,Inpatient_Questionnaire_Activities_Daily_Living,Inpatient_Questionnaire_ADL|Inpatient_Questionnaire_ADL|Inpatient_Questionnaire_Activities_Daily_Living		CRISPi|Clinical|Patient-Reported Outcomes		
+842	iq_wqav_comfort_food	Inpatient Questionnaire - Weekly Quality Assessment of Visits - Comfort with Food	"Inpatient Questionnaire: Comfort with available food options
+
+Expected permissible answers: 
+1. Very Comfortable
+2. Comfortable
+3. Neutral
+4. Uncomfortable
+5. Very Uncomfortable"	"Questionnaire: Inpatient Questionnaire (IQ)
+
+Question: How comfortable do you feel with the food provided during your stay?
+
+Permissible Answers:
+1. Very Uncomfortable
+2. Uncomfortable
+3. Neutral
+4. Comfortable
+5. Very Comfortable"	Questionnaire: Well-Being Questionnaire for Adult Volunteers (WQAV)Question: "How often do you eat comfort food when feeling stressed or upset?"List: Never, Rarely, Sometimes, Often, Always		Categorical	Food Satisfaction|Inpatient Dining Comfort|Inpatient Questionnaire, Well-being Questionnaire, Comfort Food, IQ, WQAV, Comfort Food Consumption|Meal Comfort|Patient Food Comfort|Well-being Questionnaire		CRISPi|Clinical|Patient-Reported Outcomes		
+844	iq_cognitive_restraint_eating	Inpatient Questionnaire Cognitive Restraint Eating	"Questionnaire: Inpatient Questionnaire
+Question: How often do you consciously restrict your food intake to control your weight or shape?
+Permissible Answers: Never, Rarely, Sometimes, Often, Always"	"Questionnaire: Inpatient Eating Behavior Questionnaire
+
+Question: How often do you consciously restrict your food intake to control your weight or shape?
+
+Expected Permissible Answers: 
+- Never
+- Rarely
+- Sometimes
+- Often
+- Always"	Questionnaire: Three-Factor Eating Questionnaire (TFEQ-R18)Question: Cognitive Restraint SubscaleList: 1: Strongly Disagree2: Disagree3: Neutral4: Agree5: Strongly Agree		categorical	CognitiveEatingRestraint|CognitiveRestraint|CognitiveRestraintEating|IQ_COGNITIVE_RESTRAINT|IQ_COGNITIVE_RESTRAINT, CognitiveRestraintEating, CognitiveRestraint, RestraintEating, CognitiveEatingRestraint|RestraintEating		CRISPi|Clinical|Patient-Reported Outcomes		
+847	iq_chq_pf50_done	Child Health Questionnaire PF50 Completion Status	The question "IQ_CHQ_PF50_DONE" refers to whether the Child Health Questionnaire Parent Form 50 (CHQ-PF50) has been completed. Expected permissible answers are typically "Yes" or "No."	"Questionnaire: Child Health Questionnaire (CHQ-PF50)
+
+Question: Has the Child Health Questionnaire (CHQ-PF50) been completed?
+
+Permissible Answers: Yes, No"	List: Yes, No		Binary	CHQ_PF50_COMPLETED|CHQ_PF50_DONE_STATUS|IQ_CHQ_PF50_STATUS|IQ_CHQ_PF50_STATUS,CHQ_PF50_COMPLETED,CHQ_PF50_DONE_STATUS		CRISPi|Clinical|Patient-Reported Outcomes		
+851	iq_chq_role_physical_limits	Inpatient Questionnaire CHQ Role Physical Limits	This variable corresponds to the Child Health Questionnaire (CHQ) and assesses the extent to which a child's physical health limits their role or activities. Expected permissible answers typically include a range from "Not at all" to "Very much."	"Questionnaire: Child Health Questionnaire (CHQ)
+Question: ""During the past 4 weeks, has your child been limited in schoolwork or activities with friends due to physical health problems?""
+Permissible Answers: ""Yes, limited a lot"", ""Yes, limited a little"", ""No, not limited at all"""	List: Not at all, A little, Somewhat, Quite a bit, Extremely		categorical	CHQ_Physical_Role_Limits|CHQ_Role_Physical_Limitations|CHQ_Role_Physical_Limits|CHQ_Role_Physical_Limits, Child_Health_Questionnaire_Role_Physical_Limits, CHQ_Role_Physical_Restrictions, CHQ_Role_Physical_Limitations, CHQ_Physical_Role_Limits|CHQ_Role_Physical_Restrictions|Child_Health_Questionnaire_Role_Physical_Limits		CRISPi|Clinical|Patient-Reported Outcomes		
+853	iq_chq_behavior	Inpatient Questionnaire Child Health Questionnaire Behavior	Child Health Questionnaire (CHQ), Behavior section. Expected permissible answers: Likert scale (e.g., Never, Sometimes, Often, Always).	"Questionnaire: Child Health Questionnaire (CHQ)
+Question: How often does your child exhibit behavioral problems?
+Permissible answers: Never, Rarely, Sometimes, Often, Always"	List: Never, Sometimes, Often, Very Often		categorical	Behavior Assessment|CHQ|Child Health Survey|IQ|IQ, CHQ, Behavior, Inpatient Questionnaire, Child Health Questionnaire|Inpatient Survey		CRISPi|Clinical|Patient-Reported Outcomes		
+854	iq_chq_global_behavior	Child Health Questionnaire Global Behavior	Child Health Questionnaire (CHQ): Global behavior assessment question. Expected permissible answers typically range on a scale (e.g., "Very Poor" to "Excellent").	"Questionnaire: Child Health Questionnaire (CHQ)
+Question: In general, how would you rate the child's behavior?
+Permissible answers: Excellent, Very Good, Good, Fair, Poor"	List: Excellent, Very Good, Good, Fair, Poor		Categorical	CHQ_GB|CHQ_Global_Behavior|CHQ_Global_Behavior, Child_Health_Questionnaire_Global_Behavior, CHQ_GB, Child_Health_Questionnaire_GB|Child_Health_Questionnaire_GB|Child_Health_Questionnaire_Global_Behavior		CRISPi|Clinical|Patient-Reported Outcomes		
+855	iq_chq_mental_health	Inpatient Questionnaire Child Health Questionnaire Mental Health	Child Health Questionnaire (CHQ), Mental Health Section: Assesses the emotional and behavioral well-being of a child. Expected permissible answers typically include a range of responses such as "Never," "Sometimes," "Often," and "Always."	"Questionnaire: Inpatient Questionnaire - Child Health Questionnaire (CHQ)
+
+Question: ""In the past 4 weeks, has your child's mental health caused problems with family activities or responsibilities?""
+
+Permissible Answers: 
+- Yes
+- No
+- Not applicable"	Dictionary:     CHQ_50: "In general, how would you rate your child's mental health?"    CHQ_51: "Has your child been very nervous or anxious?"    CHQ_52: "Has your child felt downhearted and blue?"List:    Excellent, Very Good, Good, Fair, Poor		Categorical	CHQ Mental Health|CHQ_MENTAL_HEALTH|CHQ_MENTAL_HEALTH, Child Health Questionnaire Mental Health, CHQ Mental Health, Mental Health CHQ, Mental Health Child Health Questionnaire|Child Health Questionnaire Mental Health|Mental Health CHQ|Mental Health Child Health Questionnaire		CRISPi|Clinical|Mental Health|Patient-Reported Outcomes		
+857	iq_chq_health_perceptions	Child Health Questionnaire - Health Perceptions	Child Health Questionnaire (CHQ): How would you rate your child's overall health? Expected permissible answers: Excellent, Very Good, Good, Fair, Poor.	"Questionnaire: Child Health Questionnaire (CHQ)
+Question: How would you rate your overall health?
+Permissible Answers: Excellent, Very Good, Good, Fair, Poor"	List: Excellent, Very Good, Good, Fair, Poor		Categorical	IQ_CHQ_HP|IQ_CHQ_HP,IQ_CHQ_HealthPerceptions,InpatientQuestionnaire_HealthPerceptions|IQ_CHQ_HealthPerceptions|InpatientQuestionnaire_HealthPerceptions		CRISPi|Clinical|Patient-Reported Outcomes		
+859	iq_chq_parent_impact_emotional	Child Health Questionnaire Parent Impact - Emotional	Child Health Questionnaire (CHQ) - Parent Form: Question regarding the emotional impact on parents due to their child's health. Expected permissible answers: Likert scale responses such as "Not at all," "A little," "Some," "A lot," "Extremely."	"Questionnaire: CHQ (Child Health Questionnaire)
+Question: How often do your child's health problems affect your emotional well-being?
+Permissible answers: Never, Rarely, Sometimes, Often, Very Often"	List: Not at all, Very little, Some, Quite a bit, Extremely		Categorical	CHQ_EmotionalImpact|CHQ_ParentEmotionalImpact|CHQ_ParentImpactEmotion|CHQ_Parent_Impact_Emotional|CHQ_Parent_Impact_Emotional, PARENT_IMPACT_EMOTIONAL, ParentImpactEmotional, CHQ_EmotionalImpact, CHQ_ParentEmotionalImpact, CHQ_ParentImpactEmotion|PARENT_IMPACT_EMOTIONAL|ParentImpactEmotional		CRISPi|Clinical|Patient-Reported Outcomes		
+862	iq_chq_family_cohesion	Child Health Questionnaire Family Cohesion	Child Health Questionnaire (CHQ), Family Cohesion question. Expected permissible answers: 1 (Not at all), 2 (A little bit), 3 (Somewhat), 4 (Quite a bit), 5 (Very much).	"Questionnaire: Child Health Questionnaire (CHQ)  
+Question: How would you rate the level of cohesion within your family?  
+Permissible Answers: Very low, Low, Moderate, High, Very high"	Questionnaire: Child Health Questionnaire (CHQ)Question: "How well do family members get along with each other?"List: 1: Very well2: Well3: Fairly well4: Poorly5: Very poorly		categorical	CHQ_FAM_COH|Family_Cohesion|IQ_CHQ_FAM_COH|IQ_CHQ_FAM_COH,CHQ_FAM_COH,Family_Cohesion,Inpatient_Family_Cohesion|Inpatient_Family_Cohesion		CRISPi|Clinical|Patient-Reported Outcomes		
+863	iq_ahhs_done	Inpatient Questionnaire Alcohol History and Health Survey Completion Status	"Questionnaire: Inpatient Questionnaire
+Question: Has the Alcohol and Health History Survey been completed?
+Permissible Answers: Yes, No"	"Questionnaire: Inpatient Hospital Stay Questionnaire
+
+Question: Have you completed the Inpatient Hospital Stay Questionnaire?
+
+Permissible Answers: Yes, No"	List: Yes, No, Not applicable		Binary	IQ_AHHS_COMPLETE, IQ_AHHS_FINISHED, IQ_AHHS_COMPLETED, IQ_AHHS_STATUS		CRISPi|Clinical|Medical History & Events|Patient-Reported Outcomes		
+867	iq_qol_comparative_health	Inpatient Questionnaire Quality of Life Comparative Health	"Questionnaire: Inpatient Quality of Life (IQOL) Questionnaire
+Question: How would you rate your current health compared to one year ago?
+Permissible Answers: Much better now, Somewhat better now, About the same, Somewhat worse now, Much worse now"	"Questionnaire: Inpatient Quality of Life (IQOL) Questionnaire
+
+Question: How would you rate your overall health compared to one year ago?
+
+Permissible answers:
+1. Much better now than one year ago
+2. Somewhat better now than one year ago
+3. About the same as one year ago
+4. Somewhat worse now than one year ago
+5. Much worse now than one year ago"	List: Much better now, Somewhat better now, About the same, Somewhat worse now, Much worse now		categorical	Comparative Health|Health Comparison|Health QOL|IQ|IQ Health|IQ, QOL, Comparative Health, Inpatient Questionnaire, Quality of Life, Health Comparison, Inpatient QOL, QOL Comparative, Health QOL, IQ Health|Inpatient QOL|Inpatient Questionnaire|QOL|QOL Comparative|Quality of Life		CRISPi|Clinical|Patient-Reported Outcomes		
+871	iq_qol_ovrwt_distress	Inpatient Questionnaire Quality of Life Overweight Distress	"Questionnaire: Inpatient Quality of Life Questionnaire
+
+Question: How distressed are you about being overweight?
+
+Permissible Answers: Not at all, A little, Moderately, Very, Extremely"	"Questionnaire: Inpatient Quality of Life (IQ-QOL) Questionnaire
+
+Question: How distressed are you about being overweight?
+
+Expected Permissible Answers:
+1. Not at all
+2. A little bit
+3. Moderately
+4. Quite a bit
+5. Extremely"	List: Not at all, Slightly, Moderately, Very, Extremely		categorical	IQ|IQ, Inpatient Questionnaire, Quality of Life, Overweight Distress, Overweight Distress Level|Inpatient Questionnaire|Overweight Distress|Overweight Distress Level|Quality of Life		CRISPi|Clinical|Patient-Reported Outcomes		
+873	iq_qol_self_regard	Inpatient Questionnaire Quality of Life Self Regard	Inpatient Questionnaire, Quality of Life section, question on self-regard. Expected permissible answers: Likert scale (e.g., 1-5, with 1 being very low self-regard and 5 being very high self-regard).	"Questionnaire: Inpatient Quality of Life Questionnaire
+
+Question: How would you rate your current level of self-regard?
+
+Permissible Answers:
+1. Very low
+2. Low
+3. Moderate
+4. High
+5. Very high"	List: Very Poor, Poor, Fair, Good, Very Good		Categorical	IQ QOL Self Esteem|IQ QOL Self Perception|IQ QOL Self-Regard|IQ_QOL_SR|IQ_QOL_SR, Inpatient Questionnaire - Quality of Life - Self Regard, Inpatient QOL Self Regard, IQ QOL Self-Regard, IQ QOL Self Esteem, IQ QOL Self Perception|Inpatient QOL Self Regard|Inpatient Questionnaire - Quality of Life - Self Regard		CRISPi|Clinical|Patient-Reported Outcomes		
+874	iq_qol_physical_appearance	Inpatient Questionnaire Quality of Life Physical Appearance	"Questionnaire: Inpatient Quality of Life (IQ-QOL)
+
+Question: How do you perceive your physical appearance?
+
+Expected Permissible Answers: Very Satisfied, Satisfied, Neutral, Dissatisfied, Very Dissatisfied"	"Questionnaire: Inpatient Quality of Life Questionnaire
+
+Question: How would you rate your physical appearance over the past week?
+
+Permissible Answers: 
+1. Very Poor
+2. Poor
+3. Fair
+4. Good
+5. Very Good"	Dictionary: 1: Very Dissatisfied, 2: Dissatisfied, 3: Neutral, 4: Satisfied, 5: Very Satisfied		Categorical	IQ Physical Appearance|IQ Physical Appearance Question|IQ Physical Appearance, Inpatient Questionnaire Physical Appearance, QOL Physical Appearance, IQ Physical Appearance Question, Inpatient QOL Physical Appearance|Inpatient QOL Physical Appearance|Inpatient Questionnaire Physical Appearance|QOL Physical Appearance		CRISPi|Clinical|Patient-Reported Outcomes		
+875	iq_qol_work_prod_work_loss	Inpatient Questionnaire Quality of Life Work Productivity Work Loss	This variable originates from the Inpatient Questionnaire Quality of Life (IQ-QOL) and pertains to the question about work productivity and work loss. Expected permissible answers typically include numerical values indicating days missed, or categorical responses such as "None," "Less than a week," "1-2 weeks," "More than 2 weeks."	Which questionnaire is used to assess the impact of health on work productivity and work loss, and what specific question corresponds to the variable "IQ_QOL_WORK_PROD_WORK_LOSS"? What are the expected permissible answers for this question?	List: None, Less than one week, One to two weeks, More than two weeks	days	categorical	IQ|IQ, QOL, Work Productivity, Work Loss, Inpatient Questionnaire, Quality of Life, Work Prod, Work Loss Days, Work Impact, Work Loss Time|Inpatient Questionnaire|QOL|Quality of Life|Work Impact|Work Loss|Work Loss Days|Work Loss Time|Work Prod|Work Productivity		CRISPi|Clinical|Patient-Reported Outcomes		
+877	iq_qol_work_prod_work_loss_a1	Inpatient Questionnaire Quality of Life Work Productivity Work Loss Question A1	"Questionnaire: Inpatient Quality of Life (IQ-QOL)
+Question: Has your work productivity been affected by your condition?
+Permissible Answers: Yes, No"	"Questionnaire: Inpatient Quality of Life (IQ-QOL)
+
+Question: ""In the past week, how many days did you miss work due to health problems?""
+
+Permissible Answers: [0, 1, 2, 3, 4, 5, 6, 7]"	List: None, 1 day, 2 days, 3 days, 4 days, 5 days, 6 days, 7 days	hours	categorical	IQ_QOL_WORK_PROD_WORK_LOSS_A1|IQ_QOL_WORK_PROD_WORK_LOSS_A1, Work Productivity Loss, Work Loss, Work Productivity, QOL Work Loss, Inpatient Work Loss, Work Prod Loss|Inpatient Work Loss|QOL Work Loss|Work Loss|Work Prod Loss|Work Productivity|Work Productivity Loss		CRISPi|Clinical|Patient-Reported Outcomes		
+878	iq_qol_work_prod_work_loss-a2	Inpatient Questionnaire Quality of Life Work Productivity Work Loss Question A2	"Questionnaire: Inpatient Quality of Life (IQ-QOL)
+Question: ""Have you experienced any work loss due to your condition?""
+Permissible answers: Yes, No"	"Questionnaire: Inpatient Quality of Life (IQ-QOL) Questionnaire  
+Question: How many days of work did you miss due to your health condition in the past 4 weeks?  
+Permissible Answers: Numeric value (e.g., 0-30 days)"	List: None, 1-2 days, 3-4 days, 5-6 days, 7-10 days, 11-15 days, 16-20 days, More than 20 days	days	categorical	IQ_WorkProdLoss_A2|InpatientQOL_WorkLoss_A2|QOL_WorkProductivity_WorkLoss_A2|QOL_Work_Prod_Work_Loss_A2|QOL_Work_Prod_Work_Loss_A2, QualityOfLife_WorkProductivity_WorkLoss_A2, QOL_WorkProductivity_WorkLoss_A2, InpatientQOL_WorkLoss_A2, IQ_WorkProdLoss_A2|QualityOfLife_WorkProductivity_WorkLoss_A2		CRISPi|Clinical|Patient-Reported Outcomes		
+881	iq_qol_phys_social_act_b	Inpatient Questionnaire Quality of Life Physical Social Activities B	"Questionnaire: Inpatient Quality of Life (IQOL) Questionnaire  
+Question: How often have physical health problems interfered with your social activities?  
+Permissible Answers: Never, Rarely, Sometimes, Often, Always"	"Questionnaire: Inpatient Quality of Life (IQOL) Questionnaire
+Question: How often have you been able to engage in social activities with friends or family in the past week?
+Permissible Answers: 
+- Never
+- Rarely
+- Sometimes
+- Often
+- Always"	List: Not at all, A little bit, Somewhat, Quite a bit, Very much		categorical	IQ|IQ, QOL, PHYS, SOCIAL, ACT, B, Inpatient Questionnaire, Quality of Life, Physical, Social Activities, Section B|Inpatient Survey|Physical Health Impact|Quality of Life|Social Activities|Social Engagement		CRISPi|Clinical|Patient-Reported Outcomes		
+883	iq_qol_phys_social_act_b2	Inpatient Questionnaire Quality of Life Physical Social Activities Question B2	"Questionnaire: Inpatient Quality of Life
+Question: How much has your physical health or emotional problems interfered with your social activities (like visiting with friends, relatives, etc.)?
+Permissible answers: Not at all, Slightly, Moderately, Quite a bit, Extremely"	"Questionnaire: Inpatient Quality of Life (IQOL)  
+Question: How often has your physical condition interfered with your social activities in the past week?  
+Permissible Answers: 
+- Never
+- Rarely
+- Sometimes
+- Often
+- Always"	List: 1: Not at all, 2: A little bit, 3: Somewhat, 4: Quite a bit, 5: Very much		Categorical	IQ Physical Social Activity B2|IQ_QOL_PHYS_SOCIAL_ACT_B2|IQ_QOL_PHYS_SOCIAL_ACT_B2, Physical Social Activity Question B2, QOL Physical Social Activity B2, Inpatient Questionnaire Physical Social Activity B2, IQ Physical Social Activity B2|Inpatient Questionnaire Physical Social Activity B2|Physical Social Activity Question B2|QOL Physical Social Activity B2		CRISPi|Clinical|Patient-Reported Outcomes		
+884	iq_qol_phys_social_act_b3	Inpatient Questionnaire Quality of Life Physical Social Activity Question B3	The questionnaire is the Inpatient Quality of Life (IQ-QOL) Questionnaire, and the corresponding question is about the impact of physical health on social activities. Expected permissible answers typically range from "Not at all" to "Extremely" on a Likert scale.	"Questionnaire: Inpatient Quality of Life (IQ-QOL)
+Question: How often have you felt that physical health problems interfered with your social activities (like visiting with friends, relatives, etc.)?
+Permissible Answers: 
+- Never
+- Rarely
+- Sometimes
+- Often
+- Always"	List: Not at all, A little bit, Moderately, Quite a bit, Extremely		categorical	IQOL_Phys_Soc_Act_B3|IQ_Phys_Social_B3|IQ_QOL_Physical_Social_Activity_B3|IQ_QOL_Physical_Social_Activity_B3, QOL_Phys_Soc_Act_B3, InpatientQOL_PhysSocial_B3, IQOL_Phys_Soc_Act_B3, IQ_Phys_Social_B3|InpatientQOL_PhysSocial_B3|QOL_Phys_Soc_Act_B3		CRISPi|Clinical|Patient-Reported Outcomes		
+887	iq_qol_phys_social_act_c2	Inpatient Questionnaire Quality of Life Physical Social Activity Question 2	SF-36 Questionnaire, Question on Physical and Social Activities, Permissible answers: Yes/No	"Questionnaire: Inpatient Quality of Life Questionnaire
+
+Question: How much has your physical condition affected your social activities in the past week?
+
+Permissible answers: 
+1. Not at all
+2. A little bit
+3. Moderately
+4. Quite a bit
+5. Extremely"	List: Not at all, Slightly, Moderately, Quite a bit, Extremely		categorical	IQ_QOL_Physical_Social_Act_C2|IQ_QOL_Physical_Social_Activity_2|IQ_QOL_Physical_Social_Activity_2, IQ_QOL_Physical_Social_Act_C2, Inpatient_QOL_Physical_Social_Activity_2, Inpatient_QOL_Physical_Social_Act_C2, QOL_Phys_Social_Activity_2, QOL_Phys_Social_Act_C2|Inpatient_QOL_Physical_Social_Act_C2|Inpatient_QOL_Physical_Social_Activity_2|QOL_Phys_Social_Act_C2|QOL_Phys_Social_Activity_2		CRISPi|Clinical|Patient-Reported Outcomes		
+891	iq_qol_mean	Inpatient Questionnaire Quality of Life Mean	"Questionnaire: Inpatient Quality of Life
+Question: How would you rate your overall quality of life over the past week?
+Permissible Answers: 1 (Very Poor), 2 (Poor), 3 (Fair), 4 (Good), 5 (Very Good)"	What is the mean quality of life score for the patient during the inpatient stay?	List: SF-36, EQ-5D, WHOQOL-BREF, PROMIS		Numerical Continuous	IQ_QOL_MEAN_SCORE|IQ_QOL_MEAN_SCORE, Inpatient_Questionnaire_QOL_Mean, QOL_Mean_Score|Inpatient_Questionnaire_QOL_Mean|QOL_Mean_Score		CRISPi|Clinical|Patient-Reported Outcomes		
+892	iq_cs_child_survey_done	Inpatient Questionnaire Child Survey Completion Status	Child Survey Completion Status in the Inpatient Questionnaire. Expected answers: Yes, No.	"Is the child survey completed? 
+- Yes
+- No"	List: Yes, No, Not Applicable		Categorical	IQ_CS_CHILD_SURVEY_COMPLETED, IQ_CS_CHILD_SURVEY_FINISHED, IQ_CS_CHILD_SURVEY_SUBMITTED, IQ_CS_CHILD_SURVEY_FILLED		CRISPi|Clinical|Patient-Reported Outcomes		

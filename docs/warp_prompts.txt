@@ -1,0 +1,45 @@
+You need to adapt my Streamlit application to use our new PostgreSQL database instead of the local CSV file.
+
+    In the data_loader.py script, find the load_cde_catalog function.
+
+    Rewrite its logic. It should now use the database.get_db_connection() function to get a database connection.
+
+    Inside the function, it should execute the SQL query SELECT * FROM public.cde_catalog; and use pandas.read_sql_query to return the result as a DataFrame.
+
+    Make sure to close the database connection when it's done.
+
+    Finally, check the main app.py script and ensure it still works correctly with this new data loading method.
+
+I need to add several new features to my Streamlit review application to enhance its review capabilities. Please make the following changes:
+
+1. Create New Backend Functions in database.py:
+
+    Create a new, comprehensive function called get_cdes_for_review(search_term=None, collection_filters=None) that fetches CDE IDs from the database. It should be able to filter CDEs based on a search term (matching title or synonym_text) and a list of collections tags.
+
+    Create a function called update_cde_field(cde_id, field_name, new_value, reviewer_id) that updates a single field in the cde_catalog table and adds a corresponding entry to the audit_log.
+
+    Create a function called add_cde_note(cde_id, note_text, reviewer_id) that inserts a new note into the cde_notes table.
+
+    Create a function called get_cde_notes(cde_id) that retrieves all notes for a given CDE.
+
+
+2. Update the User Interface in app.py and ui_components.py:
+
+    Add Filter Controls: At the top of the main review page, add a search bar (st.text_input) and a multi-select box (st.multiselect) for filtering by 'collections'. The options for the multi-select box should be populated by querying the unique values from the collections column in the cde_catalog.
+
+    Update Data Loading: The main list of CDEs to be reviewed should now be fetched using our new get_cdes_for_review function, passing in the values from the new search and filter widgets.
+
+    Implement Manual Edits: For each field displayed in the review form, add an "Edit" button. When clicked, it should show a text input where a reviewer can enter a new value. A "Save Change" button next to it should call the update_cde_field database function.
+
+    Implement Notes: Within each CDE's review section, add a new area for "Notes". It should display existing notes (using get_cde_notes) and have a st.text_area and a "Save Note" button that calls the add_cde_note database function.
+
+
+3.    Write a new test for the search feature using pytest and playwright.
+
+        The test should be in a new file inside the tests/ directory.
+
+        It needs to simulate launching the Streamlit app.
+
+        It should find the search input box, type the word "Weight" into it, and press Enter.
+
+        Finally, it should assert that the CDE with the title "Patient Weight" is visible on the page and that a CDE with the title "Patient Age" is not visible.

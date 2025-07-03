@@ -9,8 +9,26 @@ cdeCatalogs/
 
 .env
 
-.logs/
+logs/
 
-.mapping/
+mapping/
 
-.stage3_adjudication_output/
+stage3_adjudication_output/
+
+deprecatedScripts/
+
+.streamlit/
+
+.pytest_cache/
+
+tests/
+
+venv/
+
+*.csv
+
+*.sqlite
+
+__pycache__
+
+*.pyc

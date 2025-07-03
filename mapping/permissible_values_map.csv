@@ -38,3 +38,66 @@ original_expression,standardized_pv,standardized_unit,standardized_value_format,
 "{""value"": 0, ""labels"": [""No"", ""False"", ""Absent""]}, {""value"": 1, ""labels"": [""Yes"", ""True"", ""Present""]}",No|Yes,N/A,categorical,"[{""value"": 0, ""labels"": [""No"", ""False"", ""Absent""]}, {""value"": 1, ""labels"": [""Yes"", ""True"", ""Present""]}]"
 "True , False",True|False,N/A,boolean,
 "True/False OR 0/1",True|False,N/A,boolean,"{""0"": ""False"", ""1"": ""True""}"
+"All of the time    Most of the time    Some of the time    A little of the time    None of the time","All of the time|Most of the time|Some of the time|A little of the time|None of the time",N/A,categorical,
+"Definitely true    Mostly true    Don't know    Mostly false    Definitely false","Definitely true|Mostly true|Don't know|Mostly false|Definitely false",N/A,categorical,
+"Much better now than one year ago    Somewhat better now than one year ago    About the same    Somewhat worse now than one year ago    Much worse now than one year ago","Much better now than one year ago|Somewhat better now than one year ago|About the same|Somewhat worse now than one year ago|Much worse now than one year ago",N/A,categorical,
+"Yes    No",Yes|No,N/A,categorical,
+"Yes, limited a lot    Yes, limited a little    No, not limited at all","Yes, limited a lot|Yes, limited a little|No, not limited at all",N/A,categorical,
+"0: Never, 1: Occasionally, 2: Sometimes, 3: Often, 4: Always or cannot do at all","Never|Occasionally|Sometimes|Often|Always or cannot do at all",N/A,ordinal,"{""0"": ""Never"", ""1"": ""Occasionally"", ""2"": ""Sometimes"", ""3"": ""Often"", ""4"": ""Always or cannot do at all""}"
+"""Hypertension"", ""Diabetes"", ""Asthma"", ""Depression"", ""Anxiety"", ""Allergies"", ""Chronic Pain"", ""Insomnia"", ""Arthritis"", ""Migraines"", ""Heart disease"", ""Gastroesophageal reflux disease"", ""Osteoporosis"", ""Chronic obstructive pulmonary disease"", ""Psoriasis"", ""Epilepsy"", ""Menopausal symptoms""","Hypertension|Diabetes|Asthma|Depression|Anxiety|Allergies|Chronic Pain|Insomnia|Arthritis|Migraines|Heart disease|Gastroesophageal reflux disease|Osteoporosis|Chronic obstructive pulmonary disease|Psoriasis|Epilepsy|Menopausal symptoms",N/A,categorical,
+"""Never"", ""1-2 days"", ""3-4 days"", ""5-6 days"", ""7-8 days"", ""9-10 days"", ""11-12 days"", ""13-14 days""","Never|1-2 days|3-4 days|5-6 days|7-8 days|9-10 days|11-12 days|13-14 days",N/A,categorical,
+"""Never"", ""Less than once a month"", ""1-3 times a month"", ""1-2 times a week"", ""3-4 times a week"", ""5-6 times a week"", ""Once a day"", ""Twice a day"", ""Three times a day"", ""More than three times a day""","Never|Less than once a month|1-3 times a month|1-2 times a week|3-4 times a week|5-6 times a week|Once a day|Twice a day|Three times a day|More than three times a day",N/A,categorical,
+"""Never"", ""Once"", ""Twice"", ""3-5 times"", ""6-10 times"", ""More than 10 times""","Never|Once|Twice|3-5 times|6-10 times|More than 10 times",N/A,categorical,
+"""Never"", ""Rarely"", ""Once a week"", ""2-3 times a week"", ""4-6 times a week"", ""Once a day"", ""2-3 times a day"", ""4-5 times a day""","Never|Rarely|Once a week|2-3 times a week|4-6 times a week|Once a day|2-3 times a day|4-5 times a day",N/A,categorical,
+"""Significantly Increased"", ""Moderately Increased"", ""No Change"", ""Moderately Decreased"", ""Significantly Decreased""","Significantly Increased|Moderately Increased|No Change|Moderately Decreased|Significantly Decreased",N/A,categorical,
+"""Significantly improved"", ""Slightly improved"", ""No change"", ""Slightly worsened"", ""Significantly worsened"", ""N/A"".","Significantly improved|Slightly improved|No change|Slightly worsened|Significantly worsened|N/A",N/A,categorical,
+"""Yes"", ""No"", ""Unknown""","Yes|No|Unknown",N/A,categorical,
+"""anosmia"", ""hyposmia"", ""normosmia""","anosmia|hyposmia|normosmia",N/A,categorical,
+"'Increased', 'Decreased', 'No Change'","Increased|Decreased|No Change",N/A,categorical,
+"'Medicare', 'Medicaid', 'Private Health'","Medicare|Medicaid|Private Health",N/A,categorical,
+"- ""No known exposure to anyone with COVID-19""- ""Direct contact with confirmed positive COVID-19 individual""- ""Household member confirmed positive for COVID-19""- ""Close contact with suspected COVID-19 individual"" - ""Worked/Stayed in COVID-19 containment zone""- ""Attended large gathering/event""- ""Public transport usage or travel to high risk areas"" - ""Healthcare worker with potential patient exposure""- ""Unknown/Not sure""","No known exposure to anyone with COVID-19|Direct contact with confirmed positive COVID-19 individual|Household member confirmed positive for COVID-19|Close contact with suspected COVID-19 individual|Worked/Stayed in COVID-19 containment zone|Attended large gathering/event|Public transport usage or travel to high risk areas|Healthcare worker with potential patient exposure|Unknown/Not sure",N/A,categorical,
+"0 - 1000 pounds","(y>=0) & (y<=1000)",pounds,numeric,"{""min"": 0, ""max"": 1000, ""unit"": ""pounds""}"
+"0 - 12 hours","(y>=0) & (y<=12)",hours,numeric,"{""min"": 0, ""max"": 12, ""unit"": ""hours""}"
+"(y>=0) & (y<=100)","(y>=0) & (y<=100)",N/A,numeric,"{""min"": 0, ""max"": 100}"
+"(y>0)&(y<100)","(y>0)&(y<100)",N/A,numeric,"{""min"": 0, ""exclusive_min"": true, ""max"": 100, ""exclusive_max"": true}"
+"1. ""Always""2. ""Frequently""3. ""Occasionally""4. ""Rarely""5. ""Never""","Always|Frequently|Occasionally|Rarely|Never",N/A,ordinal,"{""1"": ""Always"", ""2"": ""Frequently"", ""3"": ""Occasionally"", ""4"": ""Rarely"", ""5"": ""Never""}"
+"1. ""Never or less than once per month""2. ""1-3 times per month""3. ""Once a week""4. ""2-4 times per week""5. ""5-6 times per week""6. ""Once a day""7. ""2-3 times a day""8. ""4+ times a day""","Never or less than once per month|1-3 times per month|Once a week|2-4 times per week|5-6 times per week|Once a day|2-3 times a day|4+ times a day",N/A,ordinal,"{""1"": ""Never or less than once per month"", ""2"": ""1-3 times per month"", ""3"": ""Once a week"", ""4"": ""2-4 times per week"", ""5"": ""5-6 times per week"", ""6"": ""Once a day"", ""7"": ""2-3 times a day"", ""8"": ""4+ times a day""}"
+"1. Not at all2. Less than once a month3. Once a month4. 2-3 times a month5. Once a week6. 2-3 times a week7. 4-6 times a week8. Daily9. Multiple times daily","Not at all|Less than once a month|Once a month|2-3 times a month|Once a week|2-3 times a week|4-6 times a week|Daily|Multiple times daily",N/A,ordinal,"{""1"": ""Not at all"", ""2"": ""Less than once a month"", ""3"": ""Once a month"", ""4"": ""2-3 times a month"", ""5"": ""Once a week"", ""6"": ""2-3 times a week"", ""7"": ""4-6 times a week"", ""8"": ""Daily"", ""9"": ""Multiple times daily""}"
+"Any free text entry containing additional comments, clarifications, or observations about the patient's medical condition, history, or treatment plan.",,N/A,Free text,
+"Any valid date in the format MM-DD-YYYY or DD-MM-YYYY.",,N/A,YYYY-MM-DD,
+"Any valid last name without any numerical values or special characters, except for hyphen and apostrophe which can be used.",,N/A,Free text,
+"Male, Female, Intersex, Unknown",Male|Female|Intersex|Unknown,N/A,categorical,
+"Strongly Agree, Agree, Neutral, Disagree, Strongly Disagree","Strongly Agree|Agree|Neutral|Disagree|Strongly Disagree",N/A,categorical,
+"Yes, No, Don't Know",Yes|No|Don't Know,N/A,categorical,
+"[""Yes"", ""No""]",Yes|No,N/A,categorical,
+"mg/dL",mg/dL,N/A,categorical,
+"0 (No), 1 (Yes)",No|Yes,N/A,categorical,"{""0"": ""No"", ""1"": ""Yes""}"
+"0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24","0|1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20|21|22|23|24",N/A,categorical,
+"0-10000","(y>=0) & (y<=10000)",N/A,numeric,"{""min"": 0, ""max"": 10000}"
+"0-24 hours (at 0.5-hour increments), with 0 indicating no hours spent on physical activities and 24 indicating all hours spent on physical activities.","(y>=0) & (y<=24)",hours,numeric,"{""min"": 0, ""max"": 24, ""step"": 0.5, ""unit"": ""hours""}"
+"1, 2, 3, 4, 5, 6, 7, 8, 9, 10","1|2|3|4|5|6|7|8|9|10",N/A,ordinal,
+"1. ""Hospitalization2. Intensive Care Unit (ICU) admission3. Death4. Tested Positive but asymptomatic5. Serious symptoms but not hospitalized6. Mild symptoms7. Quarantine/Isolation due to exposure8. Job Loss 9. None of the above10. Prefer not to answer""","Hospitalization|Intensive Care Unit (ICU) admission|Death|Tested Positive but asymptomatic|Serious symptoms but not hospitalized|Mild symptoms|Quarantine/Isolation due to exposure|Job Loss|None of the above|Prefer not to answer",N/A,ordinal,"{""1"": ""Hospitalization"", ""2"": ""Intensive Care Unit (ICU) admission"", ""3"": ""Death"", ""4"": ""Tested Positive but asymptomatic"", ""5"": ""Serious symptoms but not hospitalized"", ""6"": ""Mild symptoms"", ""7"": ""Quarantine/Isolation due to exposure"", ""8"": ""Job Loss"", ""9"": ""None of the above"", ""10"": ""Prefer not to answer""}"
+"Any recognized medical condition, disease or disorder as prescribed by the International Classification of Diseases (ICD-10) codes can be the acceptable value. Examples include but are not limited to ""Hypertension"", ""Type 2 Diabetes Mellitus"", ""Breast Cancer"", ""Asthma"", ""Major Depressive Disorder"", ""Rheumatoid Arthritis"", etc.",,N/A,Free text,
+"Any whole number from 0 upwards, accounting for instances where a person may not have had any outside interactions or for scenarios with numerous interactions.","(y>=0)",N/A,numeric,"{""min"": 0, ""step"": 1}"
+"N/A The nature of email addresses doesn't allow for a predetermined range or list of acceptable values. However, an email address generally follows the pattern [username]@[domain].[top-level domain].",,N/A,Free text,
+"0 (No), 1 (Mild), 2 (Moderate), 3 (Severe)","No|Mild|Moderate|Severe",N/A,ordinal,"{""0"": ""No"", ""1"": ""Mild"", ""2"": ""Moderate"", ""3"": ""Severe""}"
+"0 (Normal), 1 (Mild Impairment), 2 (Moderate Impairment), 3 (Severe Impairment), 4 (Profound Impairment)","Normal|Mild Impairment|Moderate Impairment|Severe Impairment|Profound Impairment",N/A,ordinal,"{""0"": ""Normal"", ""1"": ""Mild Impairment"", ""2"": ""Moderate Impairment"", ""3"": ""Severe Impairment"", ""4"": ""Profound Impairment""}"
+"0 - 100",,"(y>=0) & (y<=100)",numeric,"{""min"": 0, ""max"": 100}"
+"0 - 200 beats per minute","(y>=0) & (y<=200)",beats per minute,numeric,"{""min"": 0, ""max"": 200, ""unit"": ""beats per minute""}"
+"0 to 100 percent","(y>=0) & (y<=100)",percent,numeric,"{""min"": 0, ""max"": 100, ""unit"": ""percent""}"
+"0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10","0|1|2|3|4|5|6|7|8|9|10",N/A,categorical,
+"0: ""I haven't been doing this at all."", 1: ""I've been doing this a little bit."",  2: ""I've been doing this a medium amount."", 3: ""I've been doing this a lot.""","I haven't been doing this at all.|I've been doing this a little bit.|I've been doing this a medium amount.|I've been doing this a lot.",N/A,ordinal,"{""0"": ""I haven't been doing this at all."", ""1"": ""I've been doing this a little bit."", ""2"": ""I've been doing this a medium amount."", ""3"": ""I've been doing this a lot.""}"
+"0: No, 1: Yes","No|Yes",N/A,categorical,"{""0"": ""No"", ""1"": ""Yes""}"
+"0: No, 1: Yes, 2: Unknown","No|Yes|Unknown",N/A,categorical,"{""0"": ""No"", ""1"": ""Yes"", ""2"": ""Unknown""}"
+"0=right censored (not yet) 1= event at the ""age"", 2=left censored (already)","right censored|event|left censored",N/A,categorical,"{""0"": ""right censored"", ""1"": ""event"", ""2"": ""left censored""}"
+"1 (Very Poor), 2 (Poor), 3 (Fair), 4 (Good), 5 (Very Good)","Very Poor|Poor|Fair|Good|Very Good",N/A,ordinal,"{""1"": ""Very Poor"", ""2"": ""Poor"", ""3"": ""Fair"", ""4"": ""Good"", ""5"": ""Very Good""}"
+"Any alphanumeric string up to 25 characters long.",,N/A,Free text,
+"Any non-negative float value",,"(y>=0)",numeric,"{""min"": 0}"
+"1. Yes2. No3. Unknown",Yes|No|Unknown,N/A,categorical,"{""1"": ""Yes"", ""2"": ""No"", ""3"": ""Unknown""}"
+"1. ""Never""2. ""Rarely""3. ""Occasionally""4. ""Often""5. ""Everyday""","Never|Rarely|Occasionally|Often|Everyday",N/A,ordinal,"{""1"": ""Never"", ""2"": ""Rarely"", ""3"": ""Occasionally"", ""4"": ""Often"", ""5"": ""Everyday""}"
+"Any continuous numeric value",,N/A,numeric,
+"As this is a text-based field requesting descriptive input from a patient or healthcare provider, a specific range or list of permissible values would not be applicable.",,N/A,Free text,
+"Datatype: NumericPermissible values: 0 - 5",,"(y>=0) & (y<=5)",numeric,"{""min"": 0, ""max"": 5}"
+"1900 to current year",,N/A,YYYY,
+"All valid SNOMED CT codes. Examples include 43396009 (Antibody test), 104375008 (HIV test), 272320006 (Blood glucose test), etc.",,N/A,Free text,
+"Non-negative integers (0, 1, 2, ...)",,"(y>=0)",numeric,"{""min"": 0, ""step"": 1}"

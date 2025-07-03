@@ -1,0 +1,5 @@
+CONNECTION_NAME="formal-rookery-462807-k6:us-central1:cde-review-dev"
+Default TCP database port number = 5432
+Service Account= p40737817616-fhiq4r@gcp-sa-cloud-sql.iam.gserviceaccount.com
+
+./cloud_sql_proxy -instances=formal-rookery-462807-k6:us-central1:cde-review-dev=tcp:5432
